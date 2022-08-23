@@ -1,12 +1,8 @@
 import React from 'react';
-import HomeHeaderMenu from './HomeHeaderMenu';
+import Header from '../../../DesignPattern/Header/Header';
 
 function HomeHeader() {
-  return (
-    <div>
-      <HomeHeaderMenu />
-    </div>
-  );
+  return <Header />;
 }
 
 export default HomeHeader;
