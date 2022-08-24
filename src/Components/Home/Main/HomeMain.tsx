@@ -5,7 +5,6 @@ function HomeMain() {
   return (
     <div>
       <HomeHeader />
-      메인
     </div>
   );
 }
