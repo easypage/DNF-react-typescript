@@ -8,10 +8,6 @@ function HeaderMenu() {
     <div className="flex textshadow">
       <MenuList img={rankIcon} text="캐릭터 검색" />
       <MenuList img={serarchIcon} text="랭킹" />
-
-      {/* <li className="mr-6 cursor-pointer ">awe</li>
-      <li className="mr-6 cursor-pointer ">awe</li>
-      <li className="cursor-pointer ">awe</li> */}
     </div>
   );
 }
