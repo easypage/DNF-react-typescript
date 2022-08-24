@@ -2,7 +2,12 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Nanum Gothic': ['Nanum Gothic', 'cursive'],
+        Jua: ['Jua', 'cursive'],
+      },
+    },
   },
   plugins: [],
 };

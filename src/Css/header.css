@@ -1,3 +1,35 @@
 .textshadow {
   -webkit-text-stroke: 0.2px white;
 }
+
+.header-background-image::after {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to left, rgba(17, 24, 39, 0.4) 10%, rgba(17, 24, 39, 0.5) 25%, rgba(17, 24, 39, 0.7) 50%, rgba(17, 24, 39, 0.85) 75%, rgba(17, 24, 39, 1) 100%),
+    url(../asset//images/luke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+
+.hoverMenu p {
+  position: relative;
+}
+.hoverMenu:hover p {
+  color: white;
+}
+
+.hoverMenu:hover p::after {
+  content: '';
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 5px;
+  left: 0;
+  border-bottom: 2px solid white;
+}

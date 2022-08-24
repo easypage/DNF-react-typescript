@@ -3,7 +3,7 @@ import HeaderMenu from './HeaderMenu';
 import logo from '../../asset/images/logo.png';
 function Header() {
   return (
-    <div className="bg-gray-900 h-28 flex items-center text-yellow-400">
+    <div className="relative flex items-center bg-gray-900 h-28  text-yellow-400  z-0 header-background-image">
       <img src={logo} alt="logoimg" />
       <HeaderMenu />
     </div>
