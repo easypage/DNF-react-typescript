@@ -1,6 +1,5 @@
 import React from 'react';
-import rankIcon from '../../asset/images/rank.png';
-import serarchIcon from '../../asset/images/search.png';
+
 import MenuList from './MenuList';
 function HeaderMenu() {
   return (

@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       fontFamily: {
         'Nanum Gothic': ['Nanum Gothic', 'cursive'],
-        Jua: ['Jua', 'cursive'],
+      },
+      width: {
+        Container: '1080px',
+        129: '33rem',
       },
     },
   },

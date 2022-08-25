@@ -1,14 +1,12 @@
 import React from 'react';
+import HomeBodyContainer from './Body/HomeBodyContainer';
 import HomeHeader from './Header/HomeHeader';
-import SearchForm from './Body/SearchForm';
-import MainLogo from './Body/MainImg';
 
 function HomeMain() {
   return (
     <div>
       <HomeHeader />
-      <MainLogo />
-      <SearchForm />
+      <HomeBodyContainer />
     </div>
   );
 }
