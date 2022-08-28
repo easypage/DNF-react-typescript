@@ -6,8 +6,8 @@ import HomeSearchForm from './HomeSearchForm';
 function HomeBody() {
   return (
     <div className="flex flex-col  items-center">
-      <img src={mainLogo} alt="mainlogo" />
-      <HomeSearchForm />
+      {/* <img src={mainLogo} alt="mainlogo" /> */}
+      {/* <HomeSearchForm /> */}
       {/* <HomeNotice /> */}
     </div>
   );
