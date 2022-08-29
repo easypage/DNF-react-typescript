@@ -15,7 +15,7 @@ function MenuList(props: MenuListProps) {
   const RouterMapping: RouterMapping = { 캐릭터검색: '/', 경매장: '/test' };
 
   return (
-    <li className="flex items-center  text-xl font-Nanum Gothic font-bold opacity-95  cursor-pointer  hoverMenu mr-4 last:mr-0">
+    <li className="flex items-center text-xl font-Nanum Gothic font-bold opacity-95 cursor-pointer hoverMenu mr-4 last:mr-0">
       <NavLink to={RouterMapping[props.navMenu]}>
         <p className="ml-2 shad">{props.navMenu}</p>
       </NavLink>
