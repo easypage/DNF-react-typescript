@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CharSearch from '../Components/CharSearch/CharSearch';
+import CharSearchData from '../Components/CharSearch/CharSearchData';
 import HomeMain from '../Pages/HomeMain';
 import Test from '../Pages/Test';
-import CharSearch from '../Components/CharSearch/CharSearch';
 
 function AppRouter() {
   return (
@@ -10,7 +11,7 @@ function AppRouter() {
       <Routes>
         <Route path="/" element={<HomeMain />}></Route>
         <Route path="/test" element={<Test />}></Route>
-        <Route path="/charSearch" element={<CharSearch />}></Route>
+        <Route path="/charSearch" element={<CharSearchData />}></Route>
       </Routes>
     </BrowserRouter>
   );

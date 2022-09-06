@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function SearchForm() {
   const [text, setText] = useState('');
-  const [Selected, setSelected] = useState('');
+  const [Selected, setSelected] = useState('all');
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
     setText(e.currentTarget.value);
