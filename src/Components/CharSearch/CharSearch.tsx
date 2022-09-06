@@ -1,15 +1,29 @@
 import React from 'react';
-interface UserType {
-  data: object;
+import CharSearchData from './CharSearchData';
+import { Data } from './types';
+
+interface CharProps {
+  characterSearchData: Data[] | undefined;
 }
 
-<<<<<<< HEAD
-function CharSearch({ data }: UserType) {
-  return <div></div>;
-=======
-function CharSearch() {
-  return <div>캐릭터페이지입니다.</div>;
->>>>>>> 928f0ec933a2a7ee8983491cfedbb63a335286e7
+function CharSearch(props: CharProps) {
+  const { characterSearchData } = props;
+  return (
+    <div className="flex flex-row ">
+      {characterSearchData &&
+        characterSearchData.map(data => (
+          <div key={data.characterId} className="flex flex-col items-center">
+            <a href={`charView?serverId=${data.serverId}&characterId=${data.characterId}`}>
+              <img src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${data.serverId}&characterId=${data.characterId}?zoom=1`} alt="img" />
+            </a>
+            <p>{data.characterName}</p>
+            <p>{data.level}</p>
+            <p>{data.jobName}</p>
+            <p>{data.jobGrowName}</p>
+          </div>
+        ))}
+    </div>
+  );
 }
 
 export default CharSearch;
