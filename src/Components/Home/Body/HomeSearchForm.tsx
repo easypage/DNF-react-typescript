@@ -1,6 +1,7 @@
 import React from 'react';
 import { serverList } from '../../../asset/js/serverList';
 import './../../../css/searchForm.css';
+
 function SearchForm() {
   return (
     <div className="flex items-center justify-center w-4/6 h-16 border-4 border-yellow-300 border-solid rounded-full shadow-md">
