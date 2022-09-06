@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CharSearch from '../Components/CharSearch/CharSearch';
+// import CharSearch from '../Components/CharSearch/CharSearch';
 import CharSearchData from '../Components/CharSearch/CharSearchData';
 import HomeMain from '../Pages/HomeMain';
 import Test from '../Pages/Test';
