@@ -24,7 +24,7 @@ function SearchForm() {
 
       <input type="search" className="w-2/3 h-12 outline-0" onChange={onChange} />
 
-      <Link to={`charSearch/serverId=${Selected}&nickname=${text}`}>
+      <Link to={`charSearch?serverId=${Selected}&nickname=${text}`}>
         {/* <Link to="charSearch"> */}
         <button className="w-20 h-12">검색</button>
       </Link>
