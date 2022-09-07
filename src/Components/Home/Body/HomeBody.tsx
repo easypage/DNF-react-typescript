@@ -1,6 +1,4 @@
 import React from 'react';
-import CharSearch from '../../CharSearch/CharSearch';
-import CharSearchData from '../../CharSearch/CharSearchData';
 import BodyLogo from './../../../asset/images/mainlogo.png';
 import HomeSearchForm from './HomeSearchForm';
 

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Swiper } from 'swiper/react';
-import { SwiperSlide } from 'swiper/swiper-react';
+interface HomeHeaderEventBannerCardProps {
+  imgUrl: string;
+}
 
-function HomeHeaderEventBannerCard() {
+function HomeHeaderEventBannerCard({ imgUrl }: HomeHeaderEventBannerCardProps) {
   return (
     <div className="bgi" style={{ height: 100, backgroundColor: 'gray' }}>
-      Slide 1
+      Slide 1{imgUrl}
     </div>
   );
 }
