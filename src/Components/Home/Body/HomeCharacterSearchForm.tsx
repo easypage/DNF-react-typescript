@@ -5,14 +5,19 @@ import './../../../css/searchForm.css';
 import { Link } from 'react-router-dom';
 
 function SearchForm() {
-  const [text, setText] = useState('');
+  const [characterNickname, setCharacterNickname] = useState('');
   const [Selected, setSelected] = useState('all');
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
-    setText(e.currentTarget.value);
+    setCharacterNickname(e.currentTarget.value);
   };
   const handleSelect = (e: React.FormEvent<HTMLSelectElement>) => {
     setSelected(e.currentTarget.value);
+  };
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      window.location.href = `charSearch?serverId=${Selected}&nickname=${characterNickname}`;
+    }
   };
   return (
     <div className="flex items-center justify-center w-4/6 h-16 border-4 border-yellow-300 border-solid rounded-full shadow-md">
@@ -24,9 +29,9 @@ function SearchForm() {
         ))}
       </select>
 
-      <input type="search" className="w-2/3 h-12 outline-0" onChange={onChange} />
+      <input type="search" className="w-2/3 h-12 outline-0" onChange={onChange} onKeyPress={handleKeyPress} />
 
-      <Link to={`charSearch?serverId=${Selected}&nickname=${text}`}>
+      <Link to={`charSearch?serverId=${Selected}&nickname=${characterNickname}`}>
         <button className="w-20 h-12">검색</button>
       </Link>
     </div>
