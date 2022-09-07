@@ -1,19 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CharSearch from '../Components/CharSearch/CharSearch';
-import CharSearchData from '../Components/CharSearch/CharSearchData';
-import CharView from '../Components/CharView/CharView';
-import CharViewData from '../Components/CharView/CharViewData';
+import CharacterCard from '../Components/CharacterCard/CharacterDataCall';
+import CharacterDetailView from '../Components/CharacterDetailView/CharacterDataCall';
 import HomeMain from '../Pages/HomeMain';
-import Test from '../Pages/Test';
 
 function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeMain />}></Route>
-        <Route path="/charSearch" element={<CharSearchData />}></Route>
-        <Route path="/CharView" element={<CharViewData />} />
+        <Route path="/charSearch" element={<CharacterCard />}></Route>
+        <Route path="/CharView" element={<CharacterDetailView />} />
       </Routes>
     </BrowserRouter>
   );

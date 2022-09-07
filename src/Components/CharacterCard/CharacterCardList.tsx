@@ -1,17 +1,15 @@
 import React from 'react';
-import CharSearchData from './CharSearchData';
-import { Data } from './types';
+import { CharacterCardInterface } from '../Types/CharacterObjectType';
 
-interface CharProps {
-  characterSearchData: Data[] | undefined;
+interface CharacterDataProps {
+  characterDataValue: CharacterCardInterface[] | undefined;
 }
-
-function CharSearch(props: CharProps) {
-  const { characterSearchData } = props;
+function CharacterCardList(props: CharacterDataProps) {
+  const { characterDataValue } = props;
   return (
     <div className="flex flex-row ">
-      {characterSearchData &&
-        characterSearchData.map(data => (
+      {characterDataValue &&
+        characterDataValue.map(data => (
           <div key={data.characterId} className="flex flex-col items-center">
             <a href={`charView?serverId=${data.serverId}&characterId=${data.characterId}`}>
               <img src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${data.serverId}&characterId=${data.characterId}?zoom=1`} alt="img" />
@@ -25,5 +23,4 @@ function CharSearch(props: CharProps) {
     </div>
   );
 }
-
-export default CharSearch;
+export default CharacterCardList;

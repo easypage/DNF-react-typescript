@@ -1,4 +1,4 @@
-export interface Data {
+export interface CharacterCardInterface {
   characterId: string;
   characterName: string;
   jobGrowId: string;
