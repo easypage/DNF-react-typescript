@@ -1,11 +1,14 @@
 interface HomeHeaderEventBannerCardProps {
   imgUrl: string;
+  url: string;
 }
 
-function HomeHeaderEventBannerCard({ imgUrl }: HomeHeaderEventBannerCardProps) {
+function HomeHeaderEventBannerCard({ imgUrl, url }: HomeHeaderEventBannerCardProps) {
   return (
-    <div className="bgi" style={{ height: 100, backgroundColor: 'gray' }}>
-      Slide 1{imgUrl}
+    <div className="w-full ">
+      <a href={url} target="_blank">
+        <img src={imgUrl} />
+      </a>
     </div>
   );
 }
