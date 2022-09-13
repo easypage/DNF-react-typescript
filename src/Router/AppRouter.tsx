@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CharacterCard from '../Components/CharacterCard/CharacterDataCall';
-import CharacterDetailView from '../Components/CharacterDetailView/CharacterDataCall';
+import CharacterDetailView from '../Components/CharacterDetailView/CharacterDetailList';
 import HomeMain from '../Pages/HomeMain';
 
 function AppRouter() {
