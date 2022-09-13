@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import CharacterCardList from './CharacterCardList';
-import { CharacterCardInterface } from '../Types/CharacterObjectType';
+import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
 
 function CharacterDataCall() {
   const params = new URLSearchParams(window.location.search);

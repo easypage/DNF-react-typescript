@@ -1,12 +1,16 @@
 import React from 'react';
 import Header from '../../../DesignPattern/Header/Header';
-import HomeHeaderEventBanner from './SwiperEventBanner/HomeHeaderEventBanner';
+import EventBanner from '../../../DesignPattern/EvemtBanner/EventBanner';
+import EventBannerContainer from '../../../DesignPattern/EvemtBanner/EventBannerContainer';
 
 function HomeHeader() {
   return (
     <div>
       <Header />
-      <HomeHeaderEventBanner />
+
+      <div className="w-Container m-auto">
+        <EventBannerContainer />
+      </div>
     </div>
   );
 }

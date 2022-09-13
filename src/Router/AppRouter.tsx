@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CharacterCard from '../Components/CharacterCard/CharacterCardDataCall';
-import CharacterDetailView from '../Components/CharacterDetailView/CharacterDataCall';
+// import CharacterCard from '../Components/CharacterCard/CharacterDataCall';
+import CharacterDetailDataContainer from '../Components/CharacterDetailView/CharacterDetailData';
+
 import HomeMain from '../Pages/HomeMain';
 
 function AppRouter() {
@@ -10,7 +11,7 @@ function AppRouter() {
       <Routes>
         <Route path="/" element={<HomeMain />}></Route>
         <Route path="/charSearch" element={<CharacterCard />}></Route>
-        <Route path="/CharView" element={<CharacterDetailView />} />
+        <Route path="/CharView" element={<CharacterDetailDataContainer />} />
       </Routes>
     </BrowserRouter>
   );

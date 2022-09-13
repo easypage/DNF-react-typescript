@@ -10,6 +10,9 @@ module.exports = {
         Container: '1080px',
         129: '33rem',
       },
+      margin: {
+        common: '24px',
+      },
     },
   },
   plugins: [],
