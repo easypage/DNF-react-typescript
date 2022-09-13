@@ -4,7 +4,10 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
-import HomeHeaderEventBannerCard from './HomeHeaderEventBannerCard';
+
+import '../../css/swiper.css';
+
+import HomeHeaderEventBannerCard from './EventBannerCard';
 import axios from 'axios';
 
 interface EventBannerData {
@@ -32,7 +35,7 @@ function HomeHeaderEventBanner() {
 
   return (
     <Swiper
-      className="w-Container m-auto shadow-xl mt-6 "
+      className="w-Container m-auto shadow-xl mt-common "
       centeredSlides
       spaceBetween={0}
       initialSlide={1}

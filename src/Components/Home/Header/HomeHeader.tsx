@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../../DesignPattern/Header/Header';
-import HomeHeaderEventBanner from './SwiperEventBanner/HomeHeaderEventBanner';
+import HomeHeaderEventBanner from '../../../DesignPattern/EvemtBanner/EventBanner';
 
 function HomeHeader() {
   return (
