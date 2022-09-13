@@ -4,7 +4,7 @@ import { CharacterDataType } from '../Types/Character/CharacterDataType';
 
 import CharacterDetailView from './CharacterDetailListView';
 
-function CharacterDetailDataContainer() {
+function CharacterDetailData() {
   const params = new URLSearchParams(window.location.search);
   const CharacterserverId = params.get('serverId');
   const CharacterId = params.get('characterId');
@@ -18,4 +18,4 @@ function CharacterDetailDataContainer() {
 
   return <CharacterDetailView characterData={characterData} />;
 }
-export default CharacterDetailDataContainer;
+export default CharacterDetailData;

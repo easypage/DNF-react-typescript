@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import CharacterCardList from './CharacterCardList';
+import CharacterCardList from './CharacterCardView';
 import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
 
 function CharacterDataCall() {

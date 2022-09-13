@@ -1,12 +1,12 @@
 import React from 'react';
 import { CharacterAvatarData } from '../Types/Character/CharacterAvatarType';
 
-interface characterDataProps {
-  characterAvatarData: CharacterAvatarData | undefined;
+interface characterAvatarProps {
+  CharacterAvatar: CharacterAvatarData | undefined;
 }
 
-function CharacterAvatar({ characterAvatarData }: characterDataProps) {
-  return <div>{characterAvatarData?.itemName}</div>;
+function CharacterAvatar({ CharacterAvatar }: characterAvatarProps) {
+  return <div>{CharacterAvatar?.itemName}</div>;
 }
 
 export default CharacterAvatar;
