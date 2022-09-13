@@ -15,12 +15,9 @@ interface CharacterDetailInterface {
 function CharacterDetailView({ characterData, characterEquipment, characterAvatar, charactercreature, characterTalismans }: CharacterDetailInterface) {
   return (
     <div className="flex flex-row ">
-      {characterTalismans &&
-        characterTalismans.map(data => (
-          <div key={data.itemId} className="flex flex-col items-center">
-            <p>{data.itemName}</p>
-          </div>
-        ))}
+      {/* {(console.log(characterData), (<div></div>))} */}
+      {characterData && characterData.map(ss => <div>{ss.guildId}</div>)}
+      {/* {console.log(characterData && characterData.map(ss => ss.characterName))}; */}
     </div>
   );
 }

@@ -14,6 +14,7 @@ function CharacterDataCall() {
       setCharacterDataValue(characterData.data.rows);
     });
   }, []);
+  console.log(characterDataValue);
 
   return <CharacterCardList characterDataValue={characterDataValue} />;
 }

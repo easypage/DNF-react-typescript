@@ -22,7 +22,7 @@ function CharViewData() {
   useEffect(() => {
     if (loop !== '1') {
       axios.get(`https://dnf-react-typescript.herokuapp.com/character/default?serverId=${CharacterserverId}&characterId=${CharacterId}`).then(result => {
-        setCharacterData(result.data);
+        setCharacterData(result.data.character);
         setcharacterEquipment(result.data.equipment);
         setcharacterAvatar(result.data.avatar);
         setCharactercreature(result.data.creature);

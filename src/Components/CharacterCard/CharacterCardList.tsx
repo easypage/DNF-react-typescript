@@ -4,8 +4,7 @@ import { CharacterCardInterface } from '../Types/CharacterObjectType';
 interface CharacterDataProps {
   characterDataValue: CharacterCardInterface[] | undefined;
 }
-function CharacterCardList(props: CharacterDataProps) {
-  const { characterDataValue } = props;
+function CharacterCardList({ characterDataValue }: CharacterDataProps) {
   return (
     <div className="flex flex-row ">
       {characterDataValue &&
