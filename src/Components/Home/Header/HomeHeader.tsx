@@ -6,7 +6,7 @@ function HomeHeader() {
   return (
     <div>
       <Header />
-      <HomeHeaderEventBanner />
+      {/* <HomeHeaderEventBanner /> */}
     </div>
   );
 }
