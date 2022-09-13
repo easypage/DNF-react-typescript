@@ -4,38 +4,22 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
-
 import '../../css/swiper.css';
 
-import HomeHeaderEventBannerCard from './EventBannerCard';
-import axios from 'axios';
+import { EventBannerData } from '../../Components/Types/EventBanner/BannerType';
 
-interface EventBannerData {
-  url: string;
-  img: string;
+import EventBannerCard from './EventBannerCard';
+
+interface EventBannerProps {
+  eventBannerList: EventBannerData[];
 }
 
-function HomeHeaderEventBanner() {
+function EventBanner({ eventBannerList }: EventBannerProps) {
   SwiperCore.use([Autoplay, Pagination, Navigation]);
-
-  const [bannerImage, setBannerImage] = useState<EventBannerData[]>([]);
-
-  useEffect(() => {
-    async function fetchBannerImage() {
-      const data = await axios.get('https://dnf-react-typescript.herokuapp.com/event/banner');
-      console.log(data.data[0]);
-
-      setBannerImage(data.data);
-    }
-
-    if (bannerImage.length == 0) {
-      fetchBannerImage();
-    }
-  }, [bannerImage]);
 
   return (
     <Swiper
-      className="w-Container m-auto shadow-xl mt-common "
+      className="w-full shadow-xl mt-common "
       centeredSlides
       spaceBetween={0}
       initialSlide={1}
@@ -45,13 +29,13 @@ function HomeHeaderEventBanner() {
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       loop
     >
-      {bannerImage.map(banner => (
+      {eventBannerList.map(banner => (
         <SwiperSlide key={banner.url}>
-          <HomeHeaderEventBannerCard imgUrl={banner.img} url={banner.url} />
+          <EventBannerCard imgUrl={banner.img} url={banner.url} />
         </SwiperSlide>
       ))}
     </Swiper>
   );
 }
 
-export default HomeHeaderEventBanner;
+export default EventBanner;
