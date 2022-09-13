@@ -1,5 +1,5 @@
 import React from 'react';
-import { CharacterCardInterface } from '../Types/CharacterObjectType';
+import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
 
 interface CharacterDataProps {
   characterDataValue: CharacterCardInterface[] | undefined;
