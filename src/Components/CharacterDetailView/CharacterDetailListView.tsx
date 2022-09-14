@@ -7,11 +7,6 @@ interface characterDataProps {
   characterData: CharacterDataType | undefined;
 }
 function CharacterDetailListView({ characterData }: characterDataProps) {
-  return (
-    <div>
-      <CharacterAvatar characterAvatarData={characterData?.avatar} />
-    </div>
-  );
+  return <CharacterAvatar characterAvatarData={characterData?.avatar} />;
 }
-
 export default CharacterDetailListView;

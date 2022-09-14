@@ -13,5 +13,4 @@ function CharacterDetailCard() {
     </div>
   );
 }
-
 export default CharacterDetailCard;

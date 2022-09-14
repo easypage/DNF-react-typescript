@@ -6,7 +6,6 @@ import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
 function CharacterCardContainer() {
   const params = new URLSearchParams(window.location.search);
   const characterName = params.get('nickname');
-
   const [characterDataValue, setCharacterDataValue] = useState<CharacterCardInterface[]>([]);
 
   useEffect(() => {
@@ -14,8 +13,6 @@ function CharacterCardContainer() {
       setCharacterDataValue(characterData.data.rows);
     });
   }, []);
-
   return <CharacterCard characterDataValue={characterDataValue} />;
 }
-
 export default CharacterCardContainer;
