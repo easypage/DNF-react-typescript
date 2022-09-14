@@ -1,10 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CharacterCardList from '../Components/CharacterCard/CharacterCardDataCall';
+import CharacterCardList from '../Components/CharacterCard/CharacterCardContainer';
+import CharacterDetailCard from '../Components/CharacterDetailView/CharacterDetailCard';
 
-import CharacterDetailDataContainer from '../Components/CharacterDetailView/CharacterDetailData';
+// import CharacterDetailDataContainer from '../Components/CharacterDetailView/CharacterDetailData';
 
 import HomeMain from '../Pages/HomeMain';
+import { CharacterDetailData } from './../Components/Types/Character/CharacterType';
+import CharacterDetailDataContainer from './../Components/CharacterDetailView/CharacterDetailData';
 
 function AppRouter() {
   return (

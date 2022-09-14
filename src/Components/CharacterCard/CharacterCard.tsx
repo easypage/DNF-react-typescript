@@ -4,7 +4,7 @@ import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
 interface CharacterDataProps {
   characterDataValue: CharacterCardInterface[] | undefined;
 }
-function CharacterCardList({ characterDataValue }: CharacterDataProps) {
+function CharacterCard({ characterDataValue }: CharacterDataProps) {
   return (
     <div className="flex flex-row ">
       {characterDataValue &&
@@ -22,4 +22,4 @@ function CharacterCardList({ characterDataValue }: CharacterDataProps) {
     </div>
   );
 }
-export default CharacterCardList;
+export default CharacterCard;
