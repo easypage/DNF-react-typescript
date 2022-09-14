@@ -1,7 +1,8 @@
 import React from 'react';
+import '../../css/adBanner.css';
 
 function HorizenAdBanner() {
-  return <div className="w-HoeizenBanner h-HorizenBanner bg-red-400 absolute right-1 top-0">HorizenAdBanner</div>;
+  return <a href="https://github.com/easypage/DNF-react-typescript" target="_blank" className="adBanner w-VerticalBanner h-VerticalBanner absolute right-VerticalAdBannerRight top-10"></a>;
 }
 
 export default HorizenAdBanner;
