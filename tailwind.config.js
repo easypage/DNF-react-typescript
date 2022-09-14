@@ -8,7 +8,10 @@ module.exports = {
       },
       width: {
         Container: '1080px',
-        129: '33rem',
+        HoeizenBanner: '160px',
+      },
+      height: {
+        HorizenBanner: '600px',
       },
       margin: {
         common: '24px',
