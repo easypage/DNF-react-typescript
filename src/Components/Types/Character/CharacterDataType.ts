@@ -1,5 +1,5 @@
 export interface CharacterDataType {
-  avatar: string;
+  avatar: Array<any>;
   character: string;
   creature: string;
   equipment: string;
