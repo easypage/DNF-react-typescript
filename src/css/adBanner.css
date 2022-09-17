@@ -1,0 +1,32 @@
+.adBanner {
+  background-image: url(../asset//images/세로배너.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.adBanner::after {
+  content: '사이트이동하기';
+
+  opacity: 0;
+  transition: 0.3s;
+
+  font-family: 'Nanum Gothic';
+  font-weight: bold;
+  font-size: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+  background-color: rgba(176, 176, 176, 0.671);
+}
+.adBanner:hover::after {
+  opacity: 100;
+}

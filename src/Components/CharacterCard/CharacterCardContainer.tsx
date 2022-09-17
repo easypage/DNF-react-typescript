@@ -1,12 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import CharacterCardList from './CharacterCardView';
 import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
+import CharacterCard from './CharacterCard';
 
-function CharacterDataCall() {
+function CharacterCardContainer() {
   const params = new URLSearchParams(window.location.search);
   const characterName = params.get('nickname');
-
   const [characterDataValue, setCharacterDataValue] = useState<CharacterCardInterface[]>([]);
 
   useEffect(() => {
@@ -14,9 +13,6 @@ function CharacterDataCall() {
       setCharacterDataValue(characterData.data.rows);
     });
   }, []);
-  console.log(characterDataValue);
-
-  return <CharacterCardList characterDataValue={characterDataValue} />;
+  return <CharacterCard characterDataValue={characterDataValue} />;
 }
-
-export default CharacterDataCall;
+export default CharacterCardContainer;

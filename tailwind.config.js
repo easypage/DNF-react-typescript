@@ -8,10 +8,16 @@ module.exports = {
       },
       width: {
         Container: '1080px',
-        129: '33rem',
+        VerticalBanner: '160px',
+      },
+      height: {
+        VerticalBanner: '400px',
       },
       margin: {
         common: '24px',
+      },
+      spacing: {
+        VerticalAdBannerRight: '-60px',
       },
     },
   },

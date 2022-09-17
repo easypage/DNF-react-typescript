@@ -1,5 +1,6 @@
+import { CharacterAvatarData } from './CharacterAvatarType';
 export interface CharacterDataType {
-  avatar: string;
+  avatar: Array<CharacterAvatarData>;
   character: string;
   creature: string;
   equipment: string;

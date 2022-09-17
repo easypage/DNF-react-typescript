@@ -15,7 +15,6 @@ function CharacterDetailData() {
       setCharacterData(result.data);
     });
   }, []);
-
   return <CharacterDetailView characterData={characterData} />;
 }
 export default CharacterDetailData;

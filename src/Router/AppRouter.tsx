@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CharacterCardList from '../Components/CharacterCard/CharacterCardContainer';
-import CharacterDetailDataContainer from '../Components/CharacterDetailView/CharacterDetailData';
 
 import HomeMain from '../Pages/HomeMain';
+import { CharacterDetailData } from './../Components/Types/Character/CharacterType';
+import CharacterDetailDataContainer from './../Components/CharacterDetailView/CharacterDetailData';
 
 function AppRouter() {
   return (
