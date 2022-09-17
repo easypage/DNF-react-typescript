@@ -1,5 +1,5 @@
 import React from 'react';
-import footerLogo from './../../asset/images/footer.png';
+import footerLogo from './../asset/images/footer.png';
 function Footer() {
   return (
     <div className="flex justify-center ">

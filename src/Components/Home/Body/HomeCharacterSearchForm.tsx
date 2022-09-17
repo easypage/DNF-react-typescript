@@ -29,7 +29,7 @@ function SearchForm() {
         ))}
       </select>
 
-      <input type="search" className="w-2/3 h-12 outline-0" onChange={onChange} onKeyPress={handleKeyPress} />
+      <input type="search" className="w-2/3 h-12 outline-0 cursor-pointer" onChange={onChange} onKeyPress={handleKeyPress} />
 
       <Link to={`charSearch?serverId=${Selected}&nickname=${characterNickname}`}>
         <button className="w-20 h-12">검색</button>

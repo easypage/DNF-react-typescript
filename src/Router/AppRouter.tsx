@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CharacterCardList from '../Components/CharacterCard/CharacterCardContainer';
+import CharacterCardContainer from '../Components/CharacterCard/CharacterCardContainer';
+import CharacterMain from '../Pages/CharacterMain';
 
 import HomeMain from '../Pages/HomeMain';
-import { CharacterDetailData } from './../Components/Types/Character/CharacterType';
 import CharacterDetailDataContainer from './../Components/CharacterDetailView/CharacterDetailData';
 
 function AppRouter() {
@@ -11,7 +11,7 @@ function AppRouter() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeMain />}></Route>
-        <Route path="/charSearch" element={<CharacterCardList />}></Route>
+        <Route path="/charSearch" element={<CharacterMain />}></Route>
         <Route path="/CharView" element={<CharacterDetailDataContainer />} />
       </Routes>
     </BrowserRouter>

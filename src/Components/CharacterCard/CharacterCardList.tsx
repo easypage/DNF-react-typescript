@@ -6,10 +6,10 @@ interface CharacterDataProps {
 }
 function CharacterCard({ characterDataValue }: CharacterDataProps) {
   return (
-    <div className="flex flex-row ">
+    <div className="w-CharacterCard flex flex-wrap gap-2 text-xs mt-3 m-auto">
       {characterDataValue &&
         characterDataValue.map(data => (
-          <div key={data.characterId} className="flex flex-col items-center">
+          <div key={data.characterId} className="flex flex-col text-center border-2 border-solid border-gray-400 hover:border-yellow-500 ">
             <a href={`charView?serverId=${data.serverId}&characterId=${data.characterId}`}>
               <img src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${data.serverId}&characterId=${data.characterId}?zoom=1`} alt="img" />
             </a>

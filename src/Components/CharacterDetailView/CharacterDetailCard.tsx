@@ -1,6 +1,5 @@
 import React from 'react';
-
-import CharacterDetailDataContainer from './CharacterDetailData';
+import CharacterAvatar from './Avatar/CharacterAvatar';
 
 function CharacterDetailCard() {
   const params = new URLSearchParams(window.location.search);
@@ -9,7 +8,6 @@ function CharacterDetailCard() {
   return (
     <div>
       <img src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${CharacterserverId}&characterId=${CharacterId}?zoom=1`} alt="img" />
-      <CharacterDetailDataContainer />
     </div>
   );
 }

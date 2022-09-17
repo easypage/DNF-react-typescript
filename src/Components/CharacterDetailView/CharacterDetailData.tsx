@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { CharacterDataType } from '../Types/Character/CharacterDataType';
 
-import CharacterDetailView from './CharacterDetailListView';
+import CharacterDetailView from './Avatar/CharacterAvatarData';
 
 function CharacterDetailData() {
   const params = new URLSearchParams(window.location.search);

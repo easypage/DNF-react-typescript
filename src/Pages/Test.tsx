@@ -1,16 +1,10 @@
 import React from 'react';
+import CharacterDeatailViewContainer from '../Components/CharacterDetailView/CharacterDeatailViewContainer';
 
-interface TestProps {
-  name: string;
-  age: number;
-}
-
-function Test({ age, name }: TestProps) {
+function Test() {
   return (
     <div>
-      Test라우트 페이지 입니다.
-      <p>{name}</p>
-      <p>{age}</p>
+      <CharacterDeatailViewContainer />
     </div>
   );
 }

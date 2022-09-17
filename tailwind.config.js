@@ -8,7 +8,7 @@ module.exports = {
       },
       width: {
         Container: '1080px',
-        VerticalBanner: '160px',
+        CharacterCard: '860px',
       },
       height: {
         VerticalBanner: '400px',

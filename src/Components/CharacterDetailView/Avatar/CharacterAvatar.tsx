@@ -5,8 +5,6 @@ interface characterAvatarProps {
   characterAvatarData: CharacterAvatarData[] | undefined;
 }
 function CharacterAvatar({ characterAvatarData }: characterAvatarProps) {
-  console.log(characterAvatarData);
-
-  return <div></div>;
+  return <div>{}</div>;
 }
 export default CharacterAvatar;
