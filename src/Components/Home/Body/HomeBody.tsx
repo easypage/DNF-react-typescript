@@ -1,6 +1,5 @@
 import React from 'react';
-import HorizenAdBanner from '../../../DesignPattern/AdBanner/HorizenAdBanner';
-import CharacterDeatailViewContainer from '../../CharacterDetailView/CharacterDeatailViewContainer';
+
 import BodyLogo from './../../../asset/images/mainlogo.png';
 import HomeCharacterSearchForm from './HomeCharacterSearchForm';
 

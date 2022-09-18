@@ -1,20 +1,18 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import CharacterAvatar from './Avatar/CharacterAvatar';
+
 import { CharacterDataType } from '../Types/Character/CharacterDataType';
+import CharacterInfomation from './Character/CharacterInfomation';
 
-import CharacterDetailView from './Avatar/CharacterAvatarData';
-
-function CharacterDetailData() {
-  const params = new URLSearchParams(window.location.search);
-  const CharacterserverId = params.get('serverId');
-  const CharacterId = params.get('characterId');
-
-  const [characterData, setCharacterData] = useState<CharacterDataType>();
-  useEffect(() => {
-    axios.get(`https://dnf-react-typescript.herokuapp.com/character/default?serverId=${CharacterserverId}&characterId=${CharacterId}`).then(result => {
-      setCharacterData(result.data);
-    });
-  }, []);
-  return <CharacterDetailView characterData={characterData} />;
+interface characterDataProps {
+  characterData: CharacterDataType | undefined;
+}
+function CharacterDetailData({ characterData }: characterDataProps) {
+  return (
+    <div>
+      <CharacterAvatar characterAvatarData={characterData?.avatar} />
+      {/* <CharacterInfomation characterInfomationData={characterData?.character} /> */}
+    </div>
+  );
 }
 export default CharacterDetailData;
