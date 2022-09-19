@@ -1,8 +1,7 @@
 import React from 'react';
 import CharactelData from './CharactelData';
-import CharacterDetailData from './CharacterDetailData';
 
-function CharacterDetailContainer() {
+function CharacterDetailBody() {
   return (
     <div className="w-Container m-auto flex justify-center">
       <CharactelData />
@@ -10,4 +9,4 @@ function CharacterDetailContainer() {
   );
 }
 
-export default CharacterDetailContainer;
+export default CharacterDetailBody;

@@ -8,16 +8,16 @@ import CharacterCardList from './CharacterCardList';
 function CharacterCardData() {
   const params = new URLSearchParams(window.location.search);
   const characterName = params.get('nickname');
-  const [characterDataValue, setCharacterDataValue] = useState<CharacterSimpleData[]>([]);
+  const [CharacterSimpleDataList, setCharacterSimpleDataList] = useState<CharacterSimpleData[]>([]);
 
   useEffect(() => {
     axios.get(`https://dnf-react-typescript.herokuapp.com/character/nickname?nickname=${characterName}`).then(characterData => {
-      setCharacterDataValue(characterData.data.rows);
+      setCharacterSimpleDataList(characterData.data.rows);
     });
   }, []);
   return (
-    <div className="relative flex justify-center">
-      <CharacterCardList CharacterSimpleDataList={characterDataValue} />
+    <div className="relative ">
+      <CharacterCardList CharacterSimpleDataList={CharacterSimpleDataList} />
       <VerticalAdBanner />
     </div>
   );

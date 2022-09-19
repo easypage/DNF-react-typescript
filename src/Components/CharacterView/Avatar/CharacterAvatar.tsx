@@ -13,10 +13,10 @@ function CharacterAvatar({ characterAvatarData }: characterAvatarProps) {
     <div className="flex flex-col items-center">
       <img src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${CharacterserverId}&characterId=${CharacterId}?zoom=1`} alt="img" />
       {characterAvatarData &&
-        characterAvatarData.map(avatar => (
-          <div key={avatar.itemId}>
-            <span> {avatar.itemName}</span>
-            <p>{avatar.optionAbility}</p>
+        characterAvatarData.map(avatarData => (
+          <div key={avatarData.itemId}>
+            <span> {avatarData.itemName}</span>
+            <p>{avatarData.optionAbility}</p>
           </div>
         ))}
     </div>

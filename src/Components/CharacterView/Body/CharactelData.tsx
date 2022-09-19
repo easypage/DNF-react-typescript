@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { CharacterDataType } from '../Types/Character/CharacterDataType';
-import CharacterAvatarData from './CharacterDetailData';
+import { CharacterDataType } from '../../Types/Character/CharacterDataType';
+import CharacterDetailData from './CharacterDetailData';
 
 function CharactelData() {
   const params = new URLSearchParams(window.location.search);
@@ -12,9 +12,8 @@ function CharactelData() {
   useEffect(() => {
     axios.get(`https://dnf-react-typescript.herokuapp.com/character/default?serverId=${CharacterserverId}&characterId=${CharacterId}`).then(result => {
       setCharacterData(result.data);
-      console.log(result.data);
     });
   }, []);
-  return <CharacterAvatarData characterData={characterData} />;
+  return <CharacterDetailData characterData={characterData} />;
 }
 export default CharactelData;

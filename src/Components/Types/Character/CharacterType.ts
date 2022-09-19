@@ -6,5 +6,5 @@ export interface CharacterSimpleData {
   jobId: string;
   jobName: string;
   level: number;
-  serverId: string;
+  serverId: 'cain' | 'diregie' | 'siroco' | 'prey' | 'casillas' | 'hilder' | 'anton' | 'bakal';
 }

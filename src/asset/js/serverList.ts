@@ -14,3 +14,13 @@ export const serverList: serverName[] = [
   { value: 'anton', text: '안톤' },
   { value: 'bakal', text: '바칼' },
 ];
+export const serverReName = {
+  cain: '카인',
+  diregie: '디레지에',
+  siroco: '시로코',
+  prey: '프레이',
+  casillas: '카시야스',
+  anton: '안톤',
+  hilder: '힐더',
+  bakal: '바칼',
+};
