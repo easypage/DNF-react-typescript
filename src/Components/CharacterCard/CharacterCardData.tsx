@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import HorizenAdBanner from '../../DesignPattern/AdBanner/HorizenAdBanner';
 import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
 import CharacterCard from './CharacterCardList';
 
@@ -13,6 +14,11 @@ function CharacterCardData() {
       setCharacterDataValue(characterData.data.rows);
     });
   }, []);
-  return <CharacterCard characterDataValue={characterDataValue} />;
+  return (
+    <div className="relative">
+      <CharacterCard characterDataValue={characterDataValue} />
+      <HorizenAdBanner />
+    </div>
+  );
 }
 export default CharacterCardData;

@@ -20,7 +20,7 @@ function SearchForm() {
     }
   };
   return (
-    <div className="flex items-center justify-center w-4/6 h-16 border-4 border-yellow-300 border-solid rounded-full shadow-md mt-common">
+    <div className="m-auto flex items-center justify-center w-4/6 h-16 border-4 border-yellow-300 border-solid rounded-full shadow-md mt-common">
       <select name="charServer" id="charServer" className=" w-32 h-10 text-center focus:outline-none cursor-pointer" onChange={handleSelect}>
         {serverList.map(server => (
           <option value={server.value} key={server.value}>

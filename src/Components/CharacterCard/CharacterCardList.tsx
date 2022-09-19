@@ -7,7 +7,7 @@ interface CharacterDataProps {
 }
 function CharacterCard({ characterDataValue }: CharacterDataProps) {
   return (
-    <div className="w-CharacterCard flex flex-wrap gap-2 text-xs mt-3 m-auto">
+    <div className="w-full flex flex-wrap gap-2 text-xs mt-3 m-auto">
       {characterDataValue &&
         characterDataValue.map(data => (
           <Link to={`/charView?serverId=${data.serverId}&characterId=${data.characterId}`} key={data.characterId}>
