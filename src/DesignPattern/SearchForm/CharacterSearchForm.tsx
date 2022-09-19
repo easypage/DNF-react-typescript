@@ -21,7 +21,7 @@ function CharacterSearchForm() {
   };
   return (
     <div className="m-auto flex items-center justify-center w-4/6 h-16 border-4 border-yellow-300 border-solid rounded-full shadow-md mt-common">
-      <select name="charServer" id="charServer" className=" w-32 h-10 text-center focus:outline-none cursor-pointer" onChange={handleSelect}>
+      <select name="charServer" id="charServer" className=" w-28 h-10 mr-2 text-center focus:outline-none cursor-pointer" onChange={handleSelect}>
         {serverList.map(server => (
           <option value={server.value} key={server.value}>
             {server.text}
@@ -29,10 +29,10 @@ function CharacterSearchForm() {
         ))}
       </select>
 
-      <input type="search" className="w-2/3 h-12 outline-0 cursor-pointer" onChange={onChange} onKeyPress={handleKeyPress} />
+      <input type="search" className="w-2/3 h-12 outline-0" onChange={onChange} onKeyPress={handleKeyPress} />
 
-      <Link to={`/characterSearch?serverId=${Selected}&nickname=${characterNickname}`}>
-        <button className="w-20 h-12">검색</button>
+      <Link to={`/characterSearch?serverId=${Selected}&nickname=${characterNickname}`} className="ml-4">
+        <button className="w-9 h-12">검색</button>
       </Link>
     </div>
   );
