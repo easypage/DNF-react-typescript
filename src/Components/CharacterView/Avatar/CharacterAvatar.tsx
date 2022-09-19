@@ -15,7 +15,8 @@ function CharacterAvatar({ characterAvatarData }: characterAvatarProps) {
       {characterAvatarData &&
         characterAvatarData.map(avatarData => (
           <div key={avatarData.itemId}>
-            <span> {avatarData.itemName}</span>
+            <p> {avatarData.itemName}</p>
+            <p>{avatarData.clone.itemName}</p>
             <p>{avatarData.optionAbility}</p>
           </div>
         ))}

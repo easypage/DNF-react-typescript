@@ -5,6 +5,7 @@ export interface CharacterDetailData {
   guildId: string;
   guildName: string;
   jobGrowId: string;
+  jobGrowName: string;
   jobId: string;
   jobName: string;
   level: number;

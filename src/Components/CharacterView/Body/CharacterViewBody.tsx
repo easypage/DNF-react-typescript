@@ -1,10 +1,10 @@
 import React from 'react';
-import CharactelData from './CharactelData';
+import CharacteContainer from './CharacteContainer';
 
 function CharacterDetailBody() {
   return (
     <div className="w-Container m-auto flex justify-center">
-      <CharactelData />
+      <CharacteContainer />
     </div>
   );
 }

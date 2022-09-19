@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { CharacterDataType } from '../../Types/Character/CharacterDataType';
-import CharacterDetailData from './CharacterDetailData';
+import CharacterDetailData from './CharacterDetailContainer';
 
-function CharactelData() {
+function CharacteContainer() {
   const params = new URLSearchParams(window.location.search);
   const CharacterserverId = params.get('serverId');
   const CharacterId = params.get('characterId');
@@ -16,4 +16,4 @@ function CharactelData() {
   }, []);
   return <CharacterDetailData characterData={characterData} />;
 }
-export default CharactelData;
+export default CharacteContainer;
