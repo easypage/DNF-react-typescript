@@ -10,7 +10,7 @@ import CharacterCardData from './CharacterCardData';
 function CharacterCardContainer() {
   return (
     <div className="w-Container relative m-auto">
-      캐릭터 검색
+      <p className="text-4xl text-black font-bold mt-common text-center">캐릭터 검색</p>
       <SearchForm />
       <EventBannerContainer />
       <CharacterCardData />
