@@ -1,11 +1,10 @@
-export interface CharacterDetailData {
-  adventureName: string;
+export interface CharacterSimpleData {
   characterId: string;
   characterName: string;
-  guildId: string;
-  guildName: string;
   jobGrowId: string;
+  jobGrowName: string;
   jobId: string;
   jobName: string;
   level: number;
+  serverId: string;
 }

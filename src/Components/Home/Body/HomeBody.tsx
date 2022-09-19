@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BodyLogo from './../../../asset/images/mainlogo.png';
-import HomeCharacterSearchForm from './HomeCharacterSearchForm';
+import HomeCharacterSearchForm from '../../../DesignPattern/SearchForm/CharacterSearchForm';
 
 function HomeBody() {
   return (

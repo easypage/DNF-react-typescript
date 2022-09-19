@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
+import { CharacterSimpleData } from '../Types/Character/CharacterType';
 
 interface CharacterDataProps {
-  characterDataValue: CharacterCardInterface[] | undefined;
+  characterDataValue: CharacterSimpleData[] | undefined;
 }
 function CharacterCard({ characterDataValue }: CharacterDataProps) {
   return (

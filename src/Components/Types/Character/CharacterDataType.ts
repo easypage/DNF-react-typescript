@@ -1,5 +1,4 @@
 import { CharacterAvatarData } from './CharacterAvatarType';
-import { CharacterDetailData } from './CharacterType';
 export interface CharacterDataType {
   avatar: Array<CharacterAvatarData>;
   character: string;

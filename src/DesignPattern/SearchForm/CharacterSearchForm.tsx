@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { serverList } from '../../../asset/js/serverList';
-import './../../../css/searchForm.css';
+import { serverList } from '../../asset/js/serverList';
+import './../../css/searchForm.css';
 
 import { Link } from 'react-router-dom';
 
-function SearchForm() {
+function CharacterSearchForm() {
   const [characterNickname, setCharacterNickname] = useState('');
   const [Selected, setSelected] = useState('all');
 
@@ -38,4 +38,4 @@ function SearchForm() {
   );
 }
 
-export default SearchForm;
+export default CharacterSearchForm;
