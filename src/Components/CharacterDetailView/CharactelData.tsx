@@ -12,6 +12,7 @@ function CharactelData() {
   useEffect(() => {
     axios.get(`https://dnf-react-typescript.herokuapp.com/character/default?serverId=${CharacterserverId}&characterId=${CharacterId}`).then(result => {
       setCharacterData(result.data);
+      console.log(result.data);
     });
   }, []);
   return <CharacterAvatarData characterData={characterData} />;

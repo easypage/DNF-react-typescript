@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+
 import { CharacterSimpleData } from '../Types/Character/CharacterType';
+
+import VerticalAdBanner from '../../DesignPattern/AdBanner/VerticalAdBanner';
 
 import CharacterCard from './CharacterCardList';
 
@@ -14,6 +17,11 @@ function CharacterCardData() {
       setCharacterDataValue(characterData.data.rows);
     });
   }, []);
-  return <CharacterCard characterDataValue={characterDataValue} />;
+  return (
+    <div className="relative">
+      <CharacterCard characterDataValue={characterDataValue} />
+      <VerticalAdBanner />
+    </div>
+  );
 }
 export default CharacterCardData;

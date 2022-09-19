@@ -9,6 +9,7 @@ module.exports = {
       width: {
         Container: '1080px',
         CharacterCard: '860px',
+        VerticalBanner: '160px',
       },
       height: {
         VerticalBanner: '400px',
@@ -17,7 +18,7 @@ module.exports = {
         common: '24px',
       },
       spacing: {
-        VerticalAdBannerRight: '-60px',
+        VerticalAdBannerRight: '-160px',
       },
     },
   },
