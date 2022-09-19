@@ -1,7 +1,7 @@
 import React from 'react';
 import EventBannerContainer from '../../../DesignPattern/EvemtBanner/EventBannerContainer';
 import CharacterSearchForm from '../../../DesignPattern/SearchForm/CharacterSearchForm';
-import CharacterCardData from './CharacterCardData';
+import CharacterCardContainer from './CharacterCardContainer';
 
 function CharacterSearchBody() {
   return (
@@ -9,7 +9,7 @@ function CharacterSearchBody() {
       <p className="text-center mt-common text-4xl font-bold">캐릭터 검색</p>
       <CharacterSearchForm />
       <EventBannerContainer />
-      <CharacterCardData />
+      <CharacterCardContainer />
     </div>
   );
 }

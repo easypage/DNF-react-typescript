@@ -5,7 +5,7 @@ import { CharacterSimpleData } from '../../Types/Character/CharacterType';
 
 import CharacterCardList from './CharacterCardList';
 
-function CharacterCardData() {
+function CharacterCardContainer() {
   const params = new URLSearchParams(window.location.search);
   const characterName = params.get('nickname');
   const [CharacterSimpleDataList, setCharacterSimpleDataList] = useState<CharacterSimpleData[]>([]);
@@ -22,4 +22,4 @@ function CharacterCardData() {
     </div>
   );
 }
-export default CharacterCardData;
+export default CharacterCardContainer;
