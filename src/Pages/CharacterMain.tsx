@@ -1,15 +1,13 @@
 import React from 'react';
-import CharacterCardContainer from '../Components/CharacterCard/CharacterCardContainer';
-import CharacterCardHeader from '../Components/CharacterCard/CharacterCardHeader';
-import SearchForm from '../Components/Home/Body/HomeCharacterSearchForm';
-import Footer from '../DesignPattern/Footer';
-import Header from '../DesignPattern/Header/Header';
+import CharacterSearchBody from '../Components/CharacterSearch/Body/CharacterSearchBody';
+import CharacterSearchFooter from './../Components/CharacterSearch/Footer/CharacterSearchFooter';
+import CharacterSearchHeader from './../Components/CharacterSearch/Header/CharacterSearchHeader';
 function CharacterMain() {
   return (
     <div>
-      <CharacterCardHeader />
-      <CharacterCardContainer />
-      <Footer />
+      <CharacterSearchHeader />
+      <CharacterSearchBody />
+      <CharacterSearchFooter />
     </div>
   );
 }

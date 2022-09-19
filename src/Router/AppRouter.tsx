@@ -10,8 +10,8 @@ function AppRouter() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeMain />}></Route>
-        <Route path="/charSearch" element={<CharacterMain />}></Route>
-        <Route path="/charView" element={<CharacterDeatailMain />} />
+        <Route path="/characterSearch" element={<CharacterMain />}></Route>
+        <Route path="/characterView" element={<CharacterDeatailMain />} />
       </Routes>
     </BrowserRouter>
   );

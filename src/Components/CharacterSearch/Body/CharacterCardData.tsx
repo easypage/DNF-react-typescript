@@ -1,11 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import VerticalAdBanner from '../../../DesignPattern/AdBanner/VerticalAdBanner';
+import { CharacterSimpleData } from '../../Types/Character/CharacterType';
 
-import { CharacterSimpleData } from '../Types/Character/CharacterType';
-
-import VerticalAdBanner from '../../DesignPattern/AdBanner/VerticalAdBanner';
-
-import CharacterCard from './CharacterCardList';
+import CharacterCardList from './CharacterCardList';
 
 function CharacterCardData() {
   const params = new URLSearchParams(window.location.search);
@@ -18,8 +16,8 @@ function CharacterCardData() {
     });
   }, []);
   return (
-    <div className="relative">
-      <CharacterCard characterDataValue={characterDataValue} />
+    <div className="relative flex justify-center">
+      <CharacterCardList CharacterSimpleDataList={characterDataValue} />
       <VerticalAdBanner />
     </div>
   );

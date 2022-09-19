@@ -16,7 +16,7 @@ function CharacterSearchForm() {
   };
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      window.location.href = `charSearch?serverId=${Selected}&nickname=${characterNickname}`;
+      window.location.href = `characterSearch?serverId=${Selected}&nickname=${characterNickname}`;
     }
   };
   return (
@@ -31,7 +31,7 @@ function CharacterSearchForm() {
 
       <input type="search" className="w-2/3 h-12 outline-0 cursor-pointer" onChange={onChange} onKeyPress={handleKeyPress} />
 
-      <Link to={`charSearch?serverId=${Selected}&nickname=${characterNickname}`}>
+      <Link to={`/characterSearch?serverId=${Selected}&nickname=${characterNickname}`}>
         <button className="w-20 h-12">검색</button>
       </Link>
     </div>
