@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import HorizenAdBanner from '../../DesignPattern/AdBanner/HorizenAdBanner';
+import VerticalAdBanner from '../../DesignPattern/AdBanner/VerticalAdBanner';
 import { CharacterCardInterface } from '../Types/Character/CharacterObjectType';
 import CharacterCard from './CharacterCardList';
 
@@ -17,7 +17,7 @@ function CharacterCardData() {
   return (
     <div className="relative">
       <CharacterCard characterDataValue={characterDataValue} />
-      <HorizenAdBanner />
+      <VerticalAdBanner />
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import HorizenAdBanner from '../../../DesignPattern/AdBanner/HorizenAdBanner';
+import VerticalAdBanner from '../../../DesignPattern/AdBanner/VerticalAdBanner';
 import HomeBody from './HomeBody';
 function HomeBodyContainer() {
   return (
     <div className="w-Container relative font-Nanum Gothic m-auto">
       <HomeBody />
-      <HorizenAdBanner />
+      <VerticalAdBanner />
     </div>
   );
 }

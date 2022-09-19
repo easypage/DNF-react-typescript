@@ -1,5 +1,5 @@
 import React from 'react';
-import HorizenAdBanner from '../../DesignPattern/AdBanner/HorizenAdBanner';
+import HorizenAdBanner from '../../DesignPattern/AdBanner/VerticalAdBanner';
 import EventBanner from '../../DesignPattern/EvemtBanner/EventBanner';
 import EventBannerContainer from '../../DesignPattern/EvemtBanner/EventBannerContainer';
 import Footer from '../../DesignPattern/Footer';
