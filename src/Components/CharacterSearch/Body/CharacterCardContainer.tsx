@@ -17,8 +17,8 @@ function CharacterCardContainer() {
   }, []);
   return (
     <div className="relative ">
-      <CharacterCardList CharacterSimpleDataList={CharacterSimpleDataList} />
       <VerticalAdBanner />
+      {characterName === null ? <div>asdsad</div> : <CharacterCardList CharacterSimpleDataList={CharacterSimpleDataList} />}
     </div>
   );
 }

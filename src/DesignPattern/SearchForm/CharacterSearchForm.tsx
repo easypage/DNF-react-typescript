@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { serverList } from '../../asset/js/serverList';
+import { serverList } from '../../asset/ts/serverList';
 import './../../css/searchForm.css';
 
 import { Link } from 'react-router-dom';

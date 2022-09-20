@@ -1,5 +1,5 @@
 import React from 'react';
-import CharacterDetailBody from '../Components/CharacterView/Body/CharacterViewBody';
+import CharacterDetailBodyContainer from '../Components/CharacterView/Body/CharacterDetailBodyContainer';
 import Footer from '../DesignPattern/Footer';
 import Header from '../DesignPattern/Header/Header';
 
@@ -7,7 +7,7 @@ function CharacterDeatailMain() {
   return (
     <div>
       <Header />
-      <CharacterDetailBody />
+      <CharacterDetailBodyContainer />
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { serverReName } from '../../../asset/js/serverList';
+import { serverReName } from '../../../asset/ts/serverList';
 import { CharacterSimpleData } from '../../Types/Character/CharacterType';
 
 interface CharacterProps {
