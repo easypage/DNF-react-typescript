@@ -1,4 +1,7 @@
+import { characterTalismanRuneData } from './CharacterTalismanRunesType';
+import { CharacterTalismansData } from './CharacterTalismanTypes';
+
 export interface CharacterTalismanData {
-  itemId: string;
-  itemName: string;
+  talisman: CharacterTalismansData;
+  runes: characterTalismanRuneData[];
 }

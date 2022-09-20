@@ -12,11 +12,11 @@ function CharacterAvatar({ characterAvatarData }: characterAvatarProps) {
         characterAvatarData.map(avatarData => (
           <ListContainer key={avatarData.itemId}>
             <div key={avatarData.itemId} className="flex items-center justify-start ">
-              <p className="text-center font-bold w-32 border-solid border-r-2 border-gray-400 mr-4 ">{avatarData.slotName}</p>
+              <p className="text-center font-bold w-32 border-solid border-r-2 border-gray-400 mr-4  ">{avatarData.slotName}</p>
               <img src={`https://dnf-react-typescript.herokuapp.com/item/itemimage?itemId=${avatarData.itemId}`} alt={avatarData.itemName} className="mr-3" />
               <p className="text-base mr-2  font-bold">{avatarData.itemName}</p>
-              {avatarData.clone.itemName && <p className="text-sm mr-2 font-bold">{avatarData.clone.itemName}</p>}
-              <p className="text-xs text-right ">{avatarData.optionAbility}</p>
+              {avatarData.clone.itemName && <p className="text-xs mr-2 font-bold">{avatarData.clone.itemName}</p>}
+              <p className="text-xs">{avatarData.optionAbility}</p>
             </div>
           </ListContainer>
         ))}

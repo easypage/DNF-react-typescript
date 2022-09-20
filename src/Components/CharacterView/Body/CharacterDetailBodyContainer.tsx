@@ -14,6 +14,15 @@ function CharacterDetailBodyContainer() {
       setCharacterData(result.data);
     });
   }, []);
-  return <CharacterDetailBody characterAvatarData={characterData?.avatar} characterDetailData={characterData?.character} />;
+  console.log(characterData?.equipment);
+
+  return (
+    <CharacterDetailBody
+      characterAvatarData={characterData?.avatar}
+      characterDetailData={characterData?.character}
+      characterTalismanData={characterData?.talismans}
+      characterEquipmentData={characterData?.equipment}
+    />
+  );
 }
 export default CharacterDetailBodyContainer;
