@@ -1,3 +1,5 @@
+import { CharacterEquipmentEnchantlData } from './CharacterEquipmentEnchantType';
+
 export interface CharacterEquipmentData {
   itemAvailableLevel: number;
   itemGradeName: string;
@@ -7,4 +9,5 @@ export interface CharacterEquipmentData {
   itemType: string;
   itemTypeDetail: string;
   slotName: string;
+  enchant: CharacterEquipmentEnchantlData;
 }

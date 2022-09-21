@@ -14,7 +14,6 @@ function CharacterDetailBodyContainer() {
       setCharacterData(result.data);
     });
   }, []);
-  console.log(characterData?.equipment);
 
   return (
     <CharacterDetailBody
@@ -22,6 +21,8 @@ function CharacterDetailBodyContainer() {
       characterDetailData={characterData?.character}
       characterTalismanData={characterData?.talismans}
       characterEquipmentData={characterData?.equipment}
+      charactrCreatureData={characterData?.creature}
+      characterFlagData={characterData?.flag}
     />
   );
 }
