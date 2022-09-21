@@ -7,7 +7,7 @@ interface CharacterImageProps {
 function CharacterImage({ serverId, characterId }: CharacterImageProps) {
   return (
     <div>
-      <img src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${serverId}&characterId=${characterId}?zoom=1`} alt="img" />
+      <img src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${serverId}&characterId=${characterId}?zoom=1`} alt="img" className="m-auto" />
     </div>
   );
 }

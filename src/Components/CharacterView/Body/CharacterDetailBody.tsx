@@ -37,12 +37,12 @@ function CharacterDetailBody({
   return (
     <div className="w-Container m-auto flex justify-center ">
       {/* <CharacterAvatar characterAvatarData={characterAvatarData} /> */}
-      {/* <CharacterInfomation characterInfomationData={characterDetailData} /> */}
+      <CharacterInfomation characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} />
       {/* <CharacterTalisman characterTalismanData={characterTalismanData} /> */}
       {/* <CharacterEquipment characterEquipmentData={characterEquipmentData} /> */}
       {/* <CharacterCreature charactrCreatureData={charactrCreatureData} /> */}
       {/* <CharacterFlag characterFlagData={characterFlagData} /> */}
-      <CharacterStatusContainer characterId={characterId} serverId={serverId} />
+      {/* <CharacterStatusContainer characterId={characterId} serverId={serverId} /> */}
     </div>
   );
 }
