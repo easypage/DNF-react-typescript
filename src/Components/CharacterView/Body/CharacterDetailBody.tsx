@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CharacterAvatarData } from '../../Types/Character/CharacterAvatarType';
 import { CharactrCreatureData } from '../../Types/Character/CharacterCreatureType';
 import { CharacterDetailData } from '../../Types/Character/CharacterDetailType';
