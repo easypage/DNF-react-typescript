@@ -1,4 +1,7 @@
+import { characterDeafaultStatusData } from './CharacterDefaulStatusType';
+import { CharacterAttributeEnchantData } from './CharacterAttributeEnchantType';
+
 export interface characterStatusData {
-  name: string;
-  value: number;
+  default: characterDeafaultStatusData[];
+  attributeEnhancement: CharacterAttributeEnchantData[];
 }

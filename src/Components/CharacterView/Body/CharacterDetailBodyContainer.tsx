@@ -23,6 +23,8 @@ function CharacterDetailBodyContainer() {
       characterEquipmentData={characterData?.equipment}
       charactrCreatureData={characterData?.creature}
       characterFlagData={characterData?.flag}
+      characterId={CharacterId}
+      serverId={CharacterserverId}
     />
   );
 }

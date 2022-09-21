@@ -21,8 +21,19 @@ interface CharacterDetailBodyProps {
   characterEquipmentData: CharacterEquipmentData[] | undefined;
   charactrCreatureData: CharactrCreatureData | undefined;
   characterFlagData: CharacterFlagData | undefined;
+  serverId: string | null;
+  characterId: string | null;
 }
-function CharacterDetailBody({ characterAvatarData, characterDetailData, characterTalismanData, characterEquipmentData, charactrCreatureData, characterFlagData }: CharacterDetailBodyProps) {
+function CharacterDetailBody({
+  characterAvatarData,
+  characterDetailData,
+  characterTalismanData,
+  characterEquipmentData,
+  charactrCreatureData,
+  characterFlagData,
+  serverId,
+  characterId,
+}: CharacterDetailBodyProps) {
   return (
     <div className="w-Container m-auto flex justify-center ">
       {/* <CharacterAvatar characterAvatarData={characterAvatarData} /> */}
@@ -31,7 +42,7 @@ function CharacterDetailBody({ characterAvatarData, characterDetailData, charact
       {/* <CharacterEquipment characterEquipmentData={characterEquipmentData} /> */}
       {/* <CharacterCreature charactrCreatureData={charactrCreatureData} /> */}
       {/* <CharacterFlag characterFlagData={characterFlagData} /> */}
-      <CharacterStatusContainer />
+      <CharacterStatusContainer characterId={characterId} serverId={serverId} />
     </div>
   );
 }
