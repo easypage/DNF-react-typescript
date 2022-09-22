@@ -11,27 +11,23 @@ function CharacterStatus({ characterStatusData, serverId, characterId }: charact
   return (
     <div>
       <CharacterImage serverId={serverId} characterId={characterId} />
-      <div className="w-CharacterCard flex flex-wrap">
-        <table className=" w-2/3 flex flex-wrap  justify-center m-auto">
-          <tbody>
+      <div className="w-CharacterCard">
+        <ListContainer>
+          <div className="flex flex-wrap items-center justify-center ">
             {characterStatusData?.default.map(characterStatus => {
               if (characterStatus !== null) {
                 return (
-                  <tr>
-                    <td>
-                      <p className="text-lg mr-2">{characterStatus.name}</p>
-                    </td>
-                    <td>
-                      <p className="text-lg">{characterStatus.value}</p>
-                    </td>
-                  </tr>
+                  <div className="w-80 flex flex-wrap justify-center  border-2 border-solid border-gray-400 ml-3 mt-2 mb-2">
+                    <p className="text-lg mr-2 mt-2">{characterStatus.name}</p>
+                    <p className="text-lg mt-2">{characterStatus.value}</p>
+                  </div>
                 );
               } else {
-                return <div className="w-1/2 flex flex-wrap justify-center"> </div>;
+                return <div className="w-80 h-10 flex flex-wrap items-center justify-center  border-2 border-solid border-gray-400 ml-3 mt-2 mb-2 ">null</div>;
               }
             })}
-          </tbody>
-        </table>
+          </div>
+        </ListContainer>
       </div>
     </div>
   );

@@ -35,14 +35,16 @@ function CharacterDetailBody({
   characterId,
 }: CharacterDetailBodyProps) {
   return (
-    <div className="w-Container m-auto flex justify-center ">
-      {/* <CharacterAvatar characterAvatarData={characterAvatarData} /> */}
+    <div>
       <CharacterInfomation characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} />
-      {/* <CharacterTalisman characterTalismanData={characterTalismanData} /> */}
-      {/* <CharacterEquipment characterEquipmentData={characterEquipmentData} /> */}
-      {/* <CharacterCreature charactrCreatureData={charactrCreatureData} /> */}
-      {/* <CharacterFlag characterFlagData={characterFlagData} /> */}
-      {/* <CharacterStatusContainer characterId={characterId} serverId={serverId} /> */}
+      <div className="w-Container m-auto flex justify-center ">
+        {/* <CharacterAvatar characterAvatarData={characterAvatarData} /> */}
+        {/* <CharacterStatusContainer characterId={characterId} serverId={serverId} /> */}
+        {/* <CharacterTalisman characterTalismanData={characterTalismanData} /> */}
+        {/* <CharacterEquipment characterEquipmentData={characterEquipmentData} /> */}
+        {/* <CharacterCreature charactrCreatureData={charactrCreatureData} /> */}
+        {/* <CharacterFlag characterFlagData={characterFlagData} /> */}
+      </div>
     </div>
   );
 }

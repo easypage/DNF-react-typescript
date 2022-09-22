@@ -19,6 +19,8 @@ module.exports = {
       },
       spacing: {
         VerticalAdBannerRight: '-160px',
+        CharacterDetailBannerImageTop: '-120px',
+        CharacterDetailBannerImageRight: '-160px',
       },
     },
   },

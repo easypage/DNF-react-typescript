@@ -9,5 +9,5 @@ export interface CharacterEquipmentData {
   itemType: string;
   itemTypeDetail: string;
   slotName: string;
-  enchant: CharacterEquipmentEnchantlData;
+  enchant: CharacterEquipmentEnchantlData | undefined;
 }
