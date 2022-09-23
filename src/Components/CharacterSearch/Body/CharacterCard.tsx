@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { serverReName } from '../../../asset/ts/serverList';
+import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
 import { CharacterSimpleData } from '../../Types/Character/CharacterType';
 
 interface CharacterProps {
   CharacterSimpleData: CharacterSimpleData;
+  loading: boolean;
 }
 
-function CharacterCard({ CharacterSimpleData }: CharacterProps) {
+function CharacterCard({ CharacterSimpleData, loading }: CharacterProps) {
   return (
     <div>
       <Link to={`/characterView?serverId=${CharacterSimpleData.serverId}&characterId=${CharacterSimpleData.characterId}`}>
@@ -17,6 +19,7 @@ function CharacterCard({ CharacterSimpleData }: CharacterProps) {
             src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${CharacterSimpleData.serverId}&characterId=${CharacterSimpleData.characterId}?zoom=1`}
             alt="img"
           />
+
           <div className="absolute top-6 text-center w-full">
             <p className="text-2xl font-bold ">{CharacterSimpleData.characterName}</p>
             <p className="text-xs">{CharacterSimpleData.jobGrowName}</p>

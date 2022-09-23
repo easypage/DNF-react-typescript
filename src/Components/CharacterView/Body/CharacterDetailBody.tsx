@@ -13,6 +13,9 @@ import CharacteContainer from './CharacterDetailBodyContainer';
 import CharacterFlag from './../Flag/CharacterFlag';
 import { CharacterFlagData } from '../../Types/Character/CharacterFlagType';
 import CharacterStatusContainer from '../CharacterStatus/CharacterStatusContainer';
+import CharacterTab from './CharacterTab';
+import { testType } from '../../Types/Character/CharacterTabsType';
+import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
 
 interface CharacterDetailBodyProps {
   characterAvatarData: CharacterAvatarData[] | undefined;
@@ -23,7 +26,9 @@ interface CharacterDetailBodyProps {
   characterFlagData: CharacterFlagData | undefined;
   serverId: string | null;
   characterId: string | null;
+  loading: boolean;
 }
+
 function CharacterDetailBody({
   characterAvatarData,
   characterDetailData,
@@ -33,17 +38,27 @@ function CharacterDetailBody({
   characterFlagData,
   serverId,
   characterId,
+  loading,
 }: CharacterDetailBodyProps) {
+  const tabs = [
+    { tabName: '장비', tabAddress: <CharacterEquipment characterEquipmentData={characterEquipmentData} characterId={characterId} /> },
+    { tabName: '아바타', tabAddress: <CharacterAvatar characterAvatarData={characterAvatarData} /> },
+    { tabName: '크리쳐', tabAddress: <CharacterCreature charactrCreatureData={charactrCreatureData} /> },
+    { tabName: '휘장', tabAddress: <CharacterFlag characterFlagData={characterFlagData} /> },
+    { tabName: '탈리스만', tabAddress: <CharacterTalisman characterTalismanData={characterTalismanData} /> },
+  ];
+
   return (
     <div>
-      <CharacterInfomation characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} />
+      {loading ? <LoadingBar /> : <CharacterInfomation characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} loading={loading} />}
       <div className="w-Container m-auto flex justify-center ">
-        {/* <CharacterAvatar characterAvatarData={characterAvatarData} /> */}
-        {/* <CharacterStatusContainer characterId={characterId} serverId={serverId} /> */}
-        {/* <CharacterTalisman characterTalismanData={characterTalismanData} /> */}
-        {/* <CharacterEquipment characterEquipmentData={characterEquipmentData} /> */}
-        {/* <CharacterCreature charactrCreatureData={charactrCreatureData} /> */}
-        {/* <CharacterFlag characterFlagData={characterFlagData} /> */}
+        <CharacterTab tabs={tabs} />
+        {/* <CharacterAvatar characterAvatarData={characterAvatarData} />
+        <CharacterStatusContainer characterId={characterId} serverId={serverId} />
+        <CharacterTalisman characterTalismanData={characterTalismanData} />
+        <CharacterEquipment characterEquipmentData={characterEquipmentData} characterId={characterId} />
+        <CharacterCreature charactrCreatureData={charactrCreatureData} />
+        <CharacterFlag characterFlagData={characterFlagData} /> */}
       </div>
     </div>
   );
