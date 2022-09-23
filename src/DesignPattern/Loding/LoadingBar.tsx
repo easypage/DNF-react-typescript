@@ -1,12 +1,10 @@
 import React from 'react';
-import loadingss from './../../asset/images/loding.gif';
+import './../../css/loading.css';
 function LoadingBar() {
   return (
-    <div className="w-CharacterCard m-auto">
-      <div className="w-full flex justify-center items-center">
-        <p className="mr-5">loading.....</p>
-        <img src={loadingss} alt="asds" />
-      </div>
+    <div className="loadingBox">
+      <div className="dim"></div>
+      <div className="circle"></div>
     </div>
   );
 }

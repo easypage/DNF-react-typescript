@@ -50,7 +50,7 @@ function CharacterDetailBody({
 
   return (
     <div>
-      {loading ? <LoadingBar /> : <CharacterInfomation characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} loading={loading} />}
+      <CharacterInfomation characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} loading={loading} />
       <div className="w-Container m-auto flex justify-center ">
         <CharacterTab tabs={tabs} />
         {/* <CharacterAvatar characterAvatarData={characterAvatarData} />

@@ -24,14 +24,14 @@ interface tabMenuProps {
 }
 
 function CharacterTab({ tabs }: tabsProps) {
-  const [toggleState, setToggleState] = useState('');
+  const [toggleState, setToggleState] = useState('장비');
 
   const toggleTab = (index: string) => {
     setToggleState(index);
   };
 
   return (
-    <div className="w-CharacterCard mt-5 ">
+    <div className="w-CharacterCard mt-common ">
       <div className="flex justify-center">
         {tabs.map(tabsMenu => (
           <div className="tabMenus">

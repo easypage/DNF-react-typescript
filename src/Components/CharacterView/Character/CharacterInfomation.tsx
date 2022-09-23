@@ -14,21 +14,24 @@ function CharacterInfomation({ characterInfomationData, serverId, characterId, l
   return (
     <div className="w-full  h-60 flex justify-center bg-slate-100 overflow-hidden">
       <div className="w-Container h-full bg-red-300 relative flex items-center">
-        <div className=" flex flex-col justify-items-start ">
-          <div>
-            <p className="text-3xl font-bold">{characterInfomationData?.characterName}</p>
-            <p className="text-base mt-2">모험단 {characterInfomationData?.adventureName}</p>
-            <p className="text-base mt-2">길드 {characterInfomationData?.guildName}</p>
-            <p className="text-base mt-2">각성명 {characterInfomationData?.jobGrowName}</p>
-            <p className="text-base mt-2">레벨 {characterInfomationData?.level}</p>
+        {loading ? (
+          <LoadingBar />
+        ) : (
+          <div className=" flex flex-col justify-items-start ">
+            <div>
+              <p className="text-3xl font-bold">{characterInfomationData?.characterName}</p>
+              <p className="text-base mt-2">모험단 {characterInfomationData?.adventureName}</p>
+              <p className="text-base mt-2">길드 {characterInfomationData?.guildName}</p>
+              <p className="text-base mt-2">각성명 {characterInfomationData?.jobGrowName}</p>
+              <p className="text-base mt-2">레벨 {characterInfomationData?.level}</p>
+            </div>
+            <img
+              className="absolute right-CharacterDetailBannerImageRight top-CharacterDetailBannerImageTop "
+              src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${serverId}&characterId=${characterId}?zoom=2`}
+              alt="img"
+            />
           </div>
-        </div>
-
-        <img
-          className="absolute right-CharacterDetailBannerImageRight top-CharacterDetailBannerImage "
-          src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${serverId}&characterId=${characterId}?zoom=2`}
-          alt="img"
-        />
+        )}
       </div>
     </div>
   );
