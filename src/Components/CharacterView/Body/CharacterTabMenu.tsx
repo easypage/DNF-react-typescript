@@ -43,7 +43,7 @@ function CharacterTabMenu({ tabs }: tabsProps) {
       </div>
 
       <div className="w-CharacterEquipment">
-        <div className="w-CharacterContent flex justify-center items-center  bg-[#f1f1f1] m-auto">
+        <div className="w-CharacterContent flex justify-center items-center bg-[#f1f1f1] m-auto">
           {tabs.map(contents => (
             <div className={toggleState === `${contents.tabName}` ? 'block bg-white shadow-xl w-CharacterContent mt-3 p-4' : 'hidden'}>
               <p>{contents.tabName}</p>
