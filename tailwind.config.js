@@ -9,10 +9,15 @@ module.exports = {
       width: {
         Container: '1080px',
         CharacterCard: '860px',
+        CharacterStatus: '500px',
+        CharacterEquipment: '560px',
+        CharacterDeatail: '960px',
+        CharacterContent: '530px',
         VerticalBanner: '160px',
       },
       height: {
         VerticalBanner: '400px',
+        15: '60px',
       },
       margin: {
         common: '24px',

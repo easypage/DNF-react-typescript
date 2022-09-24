@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { CharacterDataType } from '../../Types/Character/CharacterDataType';
-import CharacterDetailBody from './CharacterDetailBody';
+import CharacterDetailView from './CharacterDetailView';
 
 function CharacterDetailBodyContainer() {
   const params = new URLSearchParams(window.location.search);
@@ -17,7 +17,7 @@ function CharacterDetailBodyContainer() {
   }, []);
 
   return (
-    <CharacterDetailBody
+    <CharacterDetailView
       characterAvatarData={characterData?.avatar}
       characterDetailData={characterData?.character}
       characterTalismanData={characterData?.talismans}

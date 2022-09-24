@@ -19,7 +19,7 @@ function CharacterStatusContainer({ serverId, characterId }: CharacterServerIdCh
   console.log(CharacterStatusData);
 
   return (
-    <div>
+    <div className="w-CharacterStatus mr-5">
       <CharacterStatus characterStatusData={CharacterStatusData} characterId={characterId} serverId={serverId} key={characterId} />
     </div>
   );

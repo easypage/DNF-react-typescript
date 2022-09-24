@@ -7,19 +7,16 @@ interface characterCreatureProps {
 }
 
 function CharacterCreature({ charactrCreatureData }: characterCreatureProps) {
+  console.log(charactrCreatureData);
+
   return (
-    <div className="flex flex-row">
-      <ListContainer>
-        {/* {charactrCreatureData && <img src={`https://dnf-react-typescript.herokuapp.com/item/itemimage?itemId=${charactrCreatureData?.itemId} `} alt={charactrCreatureData?.itemName} />} */}
-        <p className="text-sm font-bold">{charactrCreatureData?.itemName}</p>
-        {charactrCreatureData?.artifact.map(artifact => (
-          <div className="flex flex-row" key={artifact.itemName}>
-            <p className="text-xs ml-3">{artifact.itemRarity}</p>
-            <p className="text-xs">{artifact.itemName}</p>
-          </div>
-        ))}
-      </ListContainer>
-    </div>
+    <ListContainer>
+      <div className="flex flex-row items-center h-9">
+        <p className="text-xs text-center font-bold border-r border-solid border-gray-400 w-14 mr-3">크리쳐</p>
+        <img src={`https://dnf-react-typescript.herokuapp.com/item/itemimage?itemId=${charactrCreatureData?.itemId} `} alt={charactrCreatureData?.itemName} className="mr-2" />
+        <p className="text-xs font-bold mr-2">{charactrCreatureData?.itemName}</p>
+      </div>
+    </ListContainer>
   );
 }
 

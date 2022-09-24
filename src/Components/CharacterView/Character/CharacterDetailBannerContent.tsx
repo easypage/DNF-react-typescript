@@ -10,7 +10,7 @@ interface CharacterProps {
   characterId: string | null;
   loading: boolean;
 }
-function CharacterInfomation({ characterInfomationData, serverId, characterId, loading }: CharacterProps) {
+function CharacterDetailBannerContent({ characterInfomationData, serverId, characterId, loading }: CharacterProps) {
   return (
     <div className="w-full  h-60 flex justify-center bg-slate-100 overflow-hidden">
       <div className="w-Container h-full bg-red-300 relative flex items-center">
@@ -37,4 +37,4 @@ function CharacterInfomation({ characterInfomationData, serverId, characterId, l
   );
 }
 
-export default CharacterInfomation;
+export default CharacterDetailBannerContent;

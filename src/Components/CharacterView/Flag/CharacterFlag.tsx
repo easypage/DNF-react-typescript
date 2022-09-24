@@ -22,7 +22,7 @@ function CharacterFlag({ characterFlagData }: characterFlagProps) {
             {characterFlagData && <img src={`https://dnf-react-typescript.herokuapp.com/item/itemimage?itemId=${flagGem?.itemId}`} alt={flagGem?.itemName} className="m-auto mt-5" />}
             <p className="text-base font-bold">{flagGem.slotNo}번째 슬롯</p>
             <p className="text-xs">{flagGem.itemName}</p>
-            <p className="text-xs mb-3">{flagGem.itemAbility}</p>
+            <p className="text-xs">{flagGem.itemAbility}</p>
           </div>
         ))}
       </ListContainer>
