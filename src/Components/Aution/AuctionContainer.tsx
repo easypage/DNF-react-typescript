@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Aution() {
+function Auction() {
   return <div>asdad</div>;
 }
 
-export default Aution;
+export default Auction;
