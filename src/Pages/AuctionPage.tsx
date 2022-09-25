@@ -1,13 +1,14 @@
 import React from 'react';
-import AuctionContainer from '../Components/Aution/AuctionContainer';
+import AuctionContainer from '../Components/Aution/Body/AuctionContainer';
 import AuctionFooter from '../Components/Aution/Footer/AuctionFooter';
-import AuctionHeader from '../Components/Aution/Header/AuctionHeader';
+import AuctionHeader from '../Components/Aution/AuctionHeader';
+import AuctionBody from '../Components/Aution/Body/AuctionBody';
 
 function AuctionPage() {
   return (
     <div>
       <AuctionHeader />
-      <AuctionContainer />
+      <AuctionBody />
       <AuctionFooter />
     </div>
   );

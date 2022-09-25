@@ -11,9 +11,10 @@ module.exports = {
         CharacterCard: '860px',
         CharacterStatus: '500px',
         CharacterEquipment: '560px',
-        CharacterDeatail: '960px',
+        CharacterDetail: '960px',
         CharacterContent: '530px',
         VerticalBanner: '160px',
+        AuctionContainer: '540px',
       },
       height: {
         VerticalBanner: '400px',
