@@ -4,35 +4,29 @@ import { AuctionData } from '../../Types/Auction/AuctionType';
 interface AuctionItemDataProps {
   AuctionItemData: AuctionData[];
 }
-function Auction({ AuctionItemData }: AuctionItemDataProps) {
-  console.log(AuctionItemData);
 
+function Auction({ AuctionItemData }: AuctionItemDataProps) {
   return (
-    <div className="w-full flex justify-center mt-common">
-      <table className="w-2/3 text-center ">
-        <thead>
-          <tr>
-            <td>아이템 이미지</td>
-            <td>아이템 이름</td>
-            <td>수량</td>
-            <td>즉시 구매 가격</td>
-            <td>즉시 구매 개당가격</td>
-          </tr>
-        </thead>
-        {AuctionItemData.map(auctionItem => (
+    <div className="w-full mt-5">
+      {AuctionItemData.length !== 0 ? (
+        <table className="w-full flex justify-center text-center m-auto ">
           <tbody>
-            <tr>
-              <td>
-                <img src={`https://dnf-react-typescript.herokuapp.com/item/itemimage?itemId=${auctionItem.itemId}`} alt={auctionItem.itemName} className="m-auto" />
-              </td>
-              <td>{auctionItem.itemName}</td>
-              <td>{auctionItem.count}</td>
-              <td>{auctionItem.currentPrice}</td>
-              <td>{auctionItem.unitPrice}</td>
-            </tr>
+            {AuctionItemData?.map(auctionItem => (
+              <tr key={auctionItem.auctionNo} className="flex flex-row items-center h-16 bg-[#f1f1f1] shadow-md border-b border-solid border-gray-400 mt-4 ">
+                <td className="w-14">
+                  <img src={`https://dnf-react-typescript.herokuapp.com/item/itemimage?itemId=${auctionItem.itemId}`} alt={auctionItem.itemName} className="m-auto" />
+                </td>
+                <td className="w-48">{auctionItem.itemName}</td>
+                <td className="w-40">{auctionItem.count.toLocaleString()}개</td>
+                <td className="w-40">{auctionItem.currentPrice.toLocaleString()}원</td>
+                <td className="w-40">{auctionItem.unitPrice.toLocaleString()}원</td>
+              </tr>
+            ))}
           </tbody>
-        ))}
-      </table>
+        </table>
+      ) : (
+        <div className="flex justify-center">입력하신 아이템이 없습니다.</div>
+      )}
     </div>
   );
 }

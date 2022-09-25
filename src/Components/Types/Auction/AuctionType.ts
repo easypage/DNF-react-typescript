@@ -1,4 +1,5 @@
 export interface AuctionData {
+  auctionNo: number;
   averagePrice: number; //아이템 평균가격
   count: number; //수량
   currentPrice: number; //즉시 구매 가격
