@@ -12,7 +12,7 @@ interface RouterMapping {
 }
 
 function MenuList(props: MenuListProps) {
-  const RouterMapping: RouterMapping = { 캐릭터검색: '/characterSearch', 경매장: '/aution' };
+  const RouterMapping: RouterMapping = { 캐릭터검색: '/characterSearch', 경매장: '/auction' };
 
   return (
     <li className="flex items-center text-xl font-Nanum Gothic font-bold opacity-95 cursor-pointer hoverMenu mr-4 last:mr-0">
