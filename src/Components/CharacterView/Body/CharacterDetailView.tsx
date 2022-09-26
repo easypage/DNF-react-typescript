@@ -16,6 +16,8 @@ import CharacterStatusContainer from '../CharacterStatus/CharacterStatusContaine
 import CharacterTab from './CharacterTabMenu';
 import { testType } from '../../Types/Character/CharacterTabsType';
 import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
+import EventBannerContainer from '../../../DesignPattern/EvemtBanner/EventBannerContainer';
+import VerticalAdBanner from '../../../DesignPattern/AdBanner/VerticalAdBanner';
 
 interface CharacterDetailViewProps {
   characterAvatarData: CharacterAvatarData[] | undefined;
@@ -51,7 +53,10 @@ function CharacterDetailView({
   return (
     <div>
       <CharacterDetailBannerContent characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} loading={loading} />
-      <div className="w-Container m-auto flex justify-center ">
+      <div className="w-Container relative m-auto">
+        <EventBannerContainer />
+      </div>
+      <div className="w-Container m-auto flex justify-center relative">
         <CharacterStatusContainer characterId={characterId} serverId={serverId} />
         <CharacterTab tabs={tabs} />
       </div>

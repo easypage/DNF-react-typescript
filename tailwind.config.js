@@ -7,6 +7,7 @@ module.exports = {
         'Nanum Gothic': ['Nanum Gothic', 'cursive'],
       },
       width: {
+        Pc: '1920px',
         Container: '1080px',
         CharacterCard: '860px',
         CharacterStatus: '500px',
@@ -24,7 +25,7 @@ module.exports = {
         common: '24px',
       },
       spacing: {
-        VerticalAdBannerRight: '-160px',
+        VerticalAdBannerRight: '-180px',
         CharacterDetailBannerImageTop: '-120px',
         CharacterDetailBannerImageRight: '-160px',
       },

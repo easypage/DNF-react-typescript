@@ -1,5 +1,4 @@
 import React from 'react';
-import ListContainer from '../../../DesignPattern/CharacterDetailList/ListContainer';
 
 interface CharacterImageProps {
   serverId: string | null;
@@ -7,7 +6,7 @@ interface CharacterImageProps {
 }
 function CharacterImage({ serverId, characterId }: CharacterImageProps) {
   return (
-    <div className="">
+    <div className="flex justify-center">
       <img src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${serverId}&characterId=${characterId}?zoom=1`} alt="img" />
     </div>
   );

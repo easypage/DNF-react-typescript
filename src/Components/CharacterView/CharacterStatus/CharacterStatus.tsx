@@ -1,6 +1,6 @@
 import React from 'react';
-import ListContainer from '../../../DesignPattern/CharacterDetailList/ListContainer';
 import { characterStatusData } from '../../Types/Character/CharacterStatusType';
+import './../../../css/characterStatus.css';
 import CharacterImage from './CharacterImage';
 interface characterStatusProps {
   characterStatusData: characterStatusData | undefined;
@@ -12,22 +12,22 @@ function CharacterStatus({ characterStatusData, serverId, characterId }: charact
     <div>
       <CharacterImage serverId={serverId} characterId={characterId} />
 
-      <ListContainer>
-        <div className=" flex flex-wrap justify-center items-center">
-          {characterStatusData?.default.map(characterStatus => {
-            if (characterStatus !== null) {
-              return (
-                <div className=" w-56 flex border-2 border-solid border-gray-400 ml-3 mt-2 mb-2">
-                  <p className="w-24 h-7 text-xs flex justify-center items-center border-r border-solid border-gray-400">{characterStatus.name}</p>
-                  <p className="w-16 h-7 text-xs flex justify-center items-center m-auto">{characterStatus.value}</p>
-                </div>
-              );
-            } else {
-              return <div className=" w-56 h-7 flex flex-wrap items-center justify-center  border-2 border-solid border-gray-400 ml-3 mt-2 mb-2 "></div>;
-            }
-          })}
-        </div>
-      </ListContainer>
+      {/* <ul className="flex flex-wrap justify-between items-center border border-solid border-gray-400"> */}
+      <ul className="flex flex-wrap border-2 border-gray-400 border-solid rounded-md">
+        {characterStatusData?.default.map((characterStatus, index) => {
+          if (characterStatus !== null) {
+            return (
+              <li className="statusList" key={characterStatus.name}>
+                <p className="w-2/4 h-9 text-xs font-bold  flex justify-center items-center ">{characterStatus.name}</p>
+                <p className="w-2/4 h-9 text-xs flex justify-center items-center ">{characterStatus.value}</p>
+              </li>
+            );
+          } else {
+            return <div className="w-1/2 h-9  border-b border-solid border-gray-400 last:border-none " key={index}></div>;
+          }
+        })}
+      </ul>
+      {/* </ul> */}
     </div>
   );
 }

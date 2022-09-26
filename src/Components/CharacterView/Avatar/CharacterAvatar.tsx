@@ -1,5 +1,4 @@
 import React from 'react';
-import ListContainer from '../../../DesignPattern/CharacterDetailList/ListContainer';
 import { CharacterAvatarData } from '../../Types/Character/CharacterAvatarType';
 
 interface characterAvatarProps {
@@ -10,7 +9,7 @@ function CharacterAvatar({ characterAvatarData }: characterAvatarProps) {
     <div className="flex flex-col ">
       {characterAvatarData &&
         characterAvatarData.map(avatarData => (
-          <ListContainer key={avatarData.itemId}>
+          <li className="" key={avatarData.itemId}>
             <div key={avatarData.itemId} className="flex items-center justify-start h-12  ">
               <p className="text-center text-xs font-bold  w-20  border-solid border-r-2 border-gray-400 mr-4  ">{avatarData.slotName}</p>
               <img src={`https://dnf-react-typescript.herokuapp.com/item/itemimage?itemId=${avatarData.itemId}`} alt={avatarData.itemName} className="mr-3" />
@@ -20,7 +19,7 @@ function CharacterAvatar({ characterAvatarData }: characterAvatarProps) {
                 <p className="text-xs">{avatarData.optionAbility}</p>
               </div>
             </div>
-          </ListContainer>
+          </li>
         ))}
     </div>
   );

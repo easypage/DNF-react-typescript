@@ -1,0 +1,17 @@
+.statusList {
+  width: 50%;
+  display: flex;
+  position: relative;
+  border-right: 1px;
+  border-bottom: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.statusList:nth-last-child(2) {
+  border-bottom: none;
+}
+.statusList:nth-last-child(2n-1) {
+  border-right: none;
+}

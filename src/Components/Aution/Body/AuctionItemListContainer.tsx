@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { AuctionData } from '../../Types/Auction/AuctionType';
-import Auction from './Auction';
+import AuctionItemList from './AuctionItemList';
 
-function AuctionContainer() {
+function AuctionItemListContainer() {
   const params = new URLSearchParams(window.location.search);
   const auctionItemName = params.get('itemName');
   const [AuctionItemData, setAuctionItemData] = useState<AuctionData[]>([]);
@@ -14,7 +14,7 @@ function AuctionContainer() {
     });
   }, []);
 
-  return <div className="w-Container"> {auctionItemName === null ? <div></div> : <Auction AuctionItemData={AuctionItemData} />}</div>;
+  return <div className="w-Container"> {auctionItemName !== null && AuctionItemData.length !== 0 && <AuctionItemList AuctionItemData={AuctionItemData} />}</div>;
 }
 
-export default AuctionContainer;
+export default AuctionItemListContainer;

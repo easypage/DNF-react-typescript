@@ -1,5 +1,5 @@
 import React from 'react';
-import AuctionContainer from './AuctionContainer';
+import AuctionContainer from './AuctionItemListContainer';
 import AuctionSearchForm from './AuctionSearchForm';
 
 function AuctionBody() {
