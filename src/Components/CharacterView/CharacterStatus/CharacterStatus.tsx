@@ -2,11 +2,15 @@ import React from 'react';
 import { characterStatusData } from '../../Types/Character/CharacterStatusType';
 import './../../../css/characterStatus.css';
 import CharacterImage from './CharacterImage';
+import hp from '../../../asset/images/HP.png';
+import mp from '../../../asset/images/mp.png';
+
 interface characterStatusProps {
   characterStatusData: characterStatusData | undefined;
   serverId: string | null;
   characterId: string | null;
 }
+
 function CharacterStatus({ characterStatusData, serverId, characterId }: characterStatusProps) {
   return (
     <div>
@@ -18,12 +22,15 @@ function CharacterStatus({ characterStatusData, serverId, characterId }: charact
           if (characterStatus !== null) {
             return (
               <li className="statusList" key={characterStatus.name}>
-                <p className="w-2/4 h-9 text-xs font-bold  flex justify-center items-center ">{characterStatus.name}</p>
-                <p className="w-2/4 h-9 text-xs flex justify-center items-center ">{characterStatus.value}</p>
+                <p className="flex items-center justify-center w-14 h-9">
+                  <img src={require(`../../../asset/images/${characterStatus.name}.png`)} alt="" className="w-3 h-3 " />
+                </p>
+                <p className="w-24 h-9 text-xs font-bold  flex justify-center items-center ">{characterStatus.name}</p>
+                <p className="w-24 h-9 text-xs flex justify-center items-center ">{characterStatus.value}</p>
               </li>
             );
           } else {
-            return <div className="w-1/2 h-9  border-b border-solid border-gray-400 last:border-none " key={index}></div>;
+            return <div className="w-2/4 h-9  border-b border-solid border-gray-400 last:border-none " key={index}></div>;
           }
         })}
       </ul>

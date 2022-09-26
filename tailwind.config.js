@@ -9,13 +9,14 @@ module.exports = {
       width: {
         Pc: '1920px',
         Container: '1080px',
-        CharacterCard: '860px',
+        CharacterCard: '900px',
         CharacterStatus: '500px',
         CharacterEquipment: '560px',
         CharacterDetail: '960px',
         CharacterContent: '530px',
         VerticalBanner: '160px',
         AuctionContainer: '540px',
+        AuctionItem: '248px',
       },
       height: {
         VerticalBanner: '400px',

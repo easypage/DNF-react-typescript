@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import VerticalAdBanner from '../../../DesignPattern/AdBanner/VerticalAdBanner';
 import { CharacterSimpleData } from '../../Types/Character/CharacterType';
-
+import CharacterMenu from '../../../asset/images/nocharacter.png';
 import CharacterCardList from './CharacterCardList';
 
 function CharacterCardContainer() {
@@ -19,7 +19,13 @@ function CharacterCardContainer() {
   return (
     <div className="relative ">
       <VerticalAdBanner />
-      {characterName === null ? <div>asdsad</div> : <CharacterCardList CharacterSimpleDataList={CharacterSimpleDataList} loading={loading} />}
+      {characterName === null ? (
+        <div className="flex justify-center text-2xl">
+          <img src={CharacterMenu} alt="image" />
+        </div>
+      ) : (
+        <CharacterCardList CharacterSimpleDataList={CharacterSimpleDataList} loading={loading} />
+      )}
     </div>
   );
 }

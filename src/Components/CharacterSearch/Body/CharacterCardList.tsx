@@ -10,7 +10,7 @@ interface CharacterDataProps {
 }
 function CharacterCardList({ CharacterSimpleDataList, loading }: CharacterDataProps) {
   return (
-    <div className="w-CharacterCard flex flex-row flex-wrap gap-3 m-auto text-xs mt-6">
+    <div className="w-CharacterCard flex flex-wrap gap-3 m-auto text-xs mt-6">
       {loading ? <LoadingBar /> : CharacterSimpleDataList?.map(characterData => <CharacterCard key={characterData.characterId} CharacterSimpleData={characterData} loading={loading} />)}
     </div>
   );
