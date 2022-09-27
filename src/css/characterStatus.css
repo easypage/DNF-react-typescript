@@ -6,7 +6,7 @@
   border-bottom: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+  border-color: rgba(156, 163, 175, 0.845);
 }
 
 .statusList:nth-last-child(2) {
@@ -14,4 +14,7 @@
 }
 .statusList:nth-last-child(2n-1) {
   border-right: none;
+}
+.nullList {
+  height: 41px;
 }

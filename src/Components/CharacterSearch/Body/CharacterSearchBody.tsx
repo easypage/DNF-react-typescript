@@ -1,8 +1,7 @@
 import React from 'react';
 import EventBannerContainer from '../../../DesignPattern/EvemtBanner/EventBannerContainer';
 import CharacterSearchForm from '../../../DesignPattern/SearchForm/CharacterSearchForm';
-import CharacterSearchMainContainer from '../CharacterSearchMainContainer';
-import CharacterCardContainer from './CharacterCardContainer';
+import CharacterSearchNull from '../../../asset/images/nocharacter.png';
 import CharacterCardList from './CharacterCardList';
 import { CharacterSimpleData } from './../../Types/Character/CharacterType';
 import VerticalAdBanner from '../../../DesignPattern/AdBanner/VerticalAdBanner';
@@ -21,7 +20,13 @@ function CharacterSearchBody({ CharacterSimpleDataList }: CharacterSimpleDataLis
       <EventBannerContainer />
       <div className="w-Container min-h-[500px] relative">
         <VerticalAdBanner />
-        {CharacterSimpleDataList.length !== 0 ? <CharacterCardList CharacterSimpleDataList={CharacterSimpleDataList} /> : <div>검색값이 없습니다.</div>}
+        {CharacterSimpleDataList.length !== 0 ? (
+          <CharacterCardList CharacterSimpleDataList={CharacterSimpleDataList} />
+        ) : (
+          <div className="flex justify-center">
+            <img src={CharacterSearchNull} alt="" />
+          </div>
+        )}
       </div>
     </div>
   );
