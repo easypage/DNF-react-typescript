@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'Nanum Gothic': ['Nanum Gothic', 'cursive'],
+        Jua: ['Jua', 'sans-serif'],
+        Noto: ['Noto Sans KR', 'sans-serif'],
       },
       variants: {
         margin: ['first'],

@@ -1,6 +1,6 @@
 import React from 'react';
 import { CharacterAvatarData } from '../../Types/Character/CharacterAvatarType';
-import { CharactrCreatureData } from '../../Types/Character/CharacterCreatureType';
+import { characterCreatureData } from '../../Types/Character/CharacterCreatureType';
 import { CharacterDetailData } from '../../Types/Character/CharacterDetailType';
 import { CharacterEquipmentData } from '../../Types/Character/CharacterEquipmentType';
 import { CharacterTalismanData } from '../../Types/Character/CharacterTalismanType';
@@ -21,7 +21,7 @@ interface CharacterDetailViewProps {
   characterDetailData: CharacterDetailData | undefined;
   characterTalismanData: CharacterTalismanData[] | undefined;
   characterEquipmentData: CharacterEquipmentData[] | undefined;
-  charactrCreatureData: CharactrCreatureData | undefined;
+  characterCreatureData: characterCreatureData | undefined;
   characterFlagData: CharacterFlagData | undefined;
   CharacterStatusData: characterStatusData | undefined;
   serverId: string | null;
@@ -34,7 +34,7 @@ function CharacterViewBody({
   characterDetailData,
   characterTalismanData,
   characterEquipmentData,
-  charactrCreatureData,
+  characterCreatureData,
   characterFlagData,
   serverId,
   characterId,
@@ -43,7 +43,7 @@ function CharacterViewBody({
   const tabs = [
     { tabName: '장비', tabAddress: <CharacterEquipment characterEquipmentData={characterEquipmentData} characterId={characterId} /> },
     { tabName: '아바타', tabAddress: <CharacterAvatar characterAvatarData={characterAvatarData} /> },
-    { tabName: '크리쳐', tabAddress: <CharacterCreature charactrCreatureData={charactrCreatureData} /> },
+    { tabName: '크리쳐', tabAddress: <CharacterCreature characterCreatureData={characterCreatureData} /> },
     { tabName: '휘장', tabAddress: <CharacterFlag characterFlagData={characterFlagData} /> },
     { tabName: '탈리스만', tabAddress: <CharacterTalisman characterTalismanData={characterTalismanData} /> },
   ];

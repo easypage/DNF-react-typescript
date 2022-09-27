@@ -18,12 +18,12 @@ function CharacterSearchBody({ CharacterSimpleDataList }: CharacterSimpleDataLis
 
       <CharacterSearchForm />
       <EventBannerContainer />
-      <div className="w-Container min-h-[500px] relative">
+      <div className="w-Container min-h-[450px] relative">
         <VerticalAdBanner />
         {CharacterSimpleDataList.length !== 0 ? (
           <CharacterCardList CharacterSimpleDataList={CharacterSimpleDataList} />
         ) : (
-          <div className="flex justify-center">
+          <div className="h-[250px] flex justify-center items-center">
             <img src={CharacterSearchNull} alt="" />
           </div>
         )}

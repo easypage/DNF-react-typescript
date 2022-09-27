@@ -34,7 +34,7 @@ function CharacterViewMain() {
         characterDetailData={characterData?.character}
         characterTalismanData={characterData?.talismans}
         characterEquipmentData={characterData?.equipment}
-        charactrCreatureData={characterData?.creature}
+        characterCreatureData={characterData?.creature}
         characterFlagData={characterData?.flag}
         characterId={CharacterId}
         serverId={CharacterserverId}

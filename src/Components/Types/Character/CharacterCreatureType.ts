@@ -1,6 +1,6 @@
 import { CharacterCreatureArtifactData } from './CharacterCreatureArtifactType';
 
-export interface CharactrCreatureData {
+export interface characterCreatureData {
   itemId: string;
   itemName: string;
   itemRarity: string;
