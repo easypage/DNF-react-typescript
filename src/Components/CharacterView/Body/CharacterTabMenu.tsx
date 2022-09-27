@@ -1,19 +1,5 @@
 import React, { useState } from 'react';
-import { CharacterAvatarData } from '../../Types/Character/CharacterAvatarType';
-import { CharactrCreatureData } from '../../Types/Character/CharacterCreatureType';
-import { CharacterDetailData } from '../../Types/Character/CharacterDetailType';
-import { CharacterEquipmentData } from '../../Types/Character/CharacterEquipmentType';
-import { CharacterTalismanData } from '../../Types/Character/CharacterTalismanType';
-import CharacterAvatar from '../Avatar/CharacterAvatar';
-import CharacterInfomation from '../Character/CharacterDetailBannerContent';
-import CharacterCreature from '../Creature/CharacterCreature';
-import CharacterEquipment from '../Equipment/CharacterEquipment';
-import CharacterTalisman from '../Talisman/CharacterTalisman';
-import CharacteContainer from './CharacterDetailBodyContainer';
-import CharacterFlag from '../Flag/CharacterFlag';
-import { CharacterFlagData } from '../../Types/Character/CharacterFlagType';
-import CharacterStatusContainer from '../CharacterStatus/CharacterStatusContainer';
-import { testType } from '../../Types/Character/CharacterTabsType';
+
 import './../../../css/tabMenu.css';
 interface tabsProps {
   tabs: tabMenuProps[];

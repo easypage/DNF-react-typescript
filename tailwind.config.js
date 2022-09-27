@@ -6,8 +6,12 @@ module.exports = {
       fontFamily: {
         'Nanum Gothic': ['Nanum Gothic', 'cursive'],
       },
+      variants: {
+        margin: ['first'],
+      },
       width: {
         Pc: '1920px',
+        AuctionSearchForm: '806px',
         Container: '1080px',
         CharacterCard: '900px',
         CharacterStatus: '500px',
@@ -16,7 +20,7 @@ module.exports = {
         CharacterContent: '530px',
         VerticalBanner: '160px',
         AuctionContainer: '540px',
-        AuctionItem: '248px',
+        AuctionItem: '350px',
       },
       height: {
         VerticalBanner: '400px',
@@ -29,6 +33,7 @@ module.exports = {
         VerticalAdBannerRight: '-180px',
         CharacterDetailBannerImageTop: '-120px',
         CharacterDetailBannerImageRight: '-160px',
+        LoadingTransLate: '-50%',
       },
     },
   },

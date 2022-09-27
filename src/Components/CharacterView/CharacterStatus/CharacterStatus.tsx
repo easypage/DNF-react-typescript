@@ -2,8 +2,6 @@ import React from 'react';
 import { characterStatusData } from '../../Types/Character/CharacterStatusType';
 import './../../../css/characterStatus.css';
 import CharacterImage from './CharacterImage';
-import hp from '../../../asset/images/HP.png';
-import mp from '../../../asset/images/mp.png';
 
 interface characterStatusProps {
   characterStatusData: characterStatusData | undefined;
@@ -13,7 +11,7 @@ interface characterStatusProps {
 
 function CharacterStatus({ characterStatusData, serverId, characterId }: characterStatusProps) {
   return (
-    <div>
+    <div className="w-CharacterStatus mr-5">
       <CharacterImage serverId={serverId} characterId={characterId} />
 
       {/* <ul className="flex flex-wrap justify-between items-center border border-solid border-gray-400"> */}
@@ -23,7 +21,7 @@ function CharacterStatus({ characterStatusData, serverId, characterId }: charact
             return (
               <li className="statusList" key={characterStatus.name}>
                 <p className="flex items-center justify-center w-14 h-9">
-                  <img src={require(`../../../asset/images/${characterStatus.name}.png`)} alt="" className="w-3 h-3 " />
+                  <img src={require(`../../../asset/images/characterStatusImages/${characterStatus.name}.png`)} alt="" className="w-3 h-3 " />
                 </p>
                 <p className="w-24 h-9 text-xs font-bold  flex justify-center items-center ">{characterStatus.name}</p>
                 <p className="w-24 h-9 text-xs flex justify-center items-center ">{characterStatus.value}</p>

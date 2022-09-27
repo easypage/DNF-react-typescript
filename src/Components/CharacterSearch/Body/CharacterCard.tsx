@@ -6,10 +6,9 @@ import { CharacterSimpleData } from '../../Types/Character/CharacterType';
 
 interface CharacterProps {
   CharacterSimpleData: CharacterSimpleData;
-  loading: boolean;
 }
 
-function CharacterCard({ CharacterSimpleData, loading }: CharacterProps) {
+function CharacterCard({ CharacterSimpleData }: CharacterProps) {
   return (
     <Link to={`/characterView?serverId=${CharacterSimpleData.serverId}&characterId=${CharacterSimpleData.characterId}`}>
       <div className="w-52 h-72 relative shadow-lg rounded-xl flex flex-col text-center border-2 border-solid border-gray-400 hover:border-yellow-500  ">

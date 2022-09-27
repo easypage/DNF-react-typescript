@@ -1,8 +1,8 @@
 import React from 'react';
 import Footer from '../../../DesignPattern/Footer';
 
-function CharacterDetailFooter() {
+function CharacterViewFooter() {
   return <Footer />;
 }
 
-export default CharacterDetailFooter;
+export default CharacterViewFooter;

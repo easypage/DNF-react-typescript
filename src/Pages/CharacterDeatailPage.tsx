@@ -1,14 +1,13 @@
 import React from 'react';
-import CharacterDetailBody from '../Components/CharacterView/Body/CharacterDetailBody';
-import CharacterDetailFooter from '../Components/CharacterView/Footer/CharacterDetailFooter';
-import CharacterDetailHeader from '../Components/CharacterView/Header/CharacterDetailHeader';
+import CharacterViewBody from '../Components/CharacterView/Body/CharacterViewBody';
+import CharacterViewMain from '../Components/CharacterView/CharacterViewMain';
+import CharacterDetailFooter from '../Components/CharacterView/Footer/CharacterViewFooter';
+import CharacterDetailHeader from '../Components/CharacterView/Header/CharacterViewHeader';
 
 function CharacterDeatailPage() {
   return (
     <div>
-      <CharacterDetailHeader />
-      <CharacterDetailBody />
-      <CharacterDetailFooter />
+      <CharacterViewMain />
     </div>
   );
 }

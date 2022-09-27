@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CharacterAvatarData } from '../../Types/Character/CharacterAvatarType';
 import { CharactrCreatureData } from '../../Types/Character/CharacterCreatureType';
 import { CharacterDetailData } from '../../Types/Character/CharacterDetailType';
@@ -9,15 +9,12 @@ import CharacterDetailBannerContent from '../Character/CharacterDetailBannerCont
 import CharacterCreature from '../Creature/CharacterCreature';
 import CharacterEquipment from '../Equipment/CharacterEquipment';
 import CharacterTalisman from '../Talisman/CharacterTalisman';
-import CharacteContainer from './CharacterDetailBodyContainer';
 import CharacterFlag from '../Flag/CharacterFlag';
 import { CharacterFlagData } from '../../Types/Character/CharacterFlagType';
-import CharacterStatusContainer from '../CharacterStatus/CharacterStatusContainer';
 import CharacterTab from './CharacterTabMenu';
-import { testType } from '../../Types/Character/CharacterTabsType';
-import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
 import EventBannerContainer from '../../../DesignPattern/EvemtBanner/EventBannerContainer';
-import VerticalAdBanner from '../../../DesignPattern/AdBanner/VerticalAdBanner';
+import CharacterStatus from './../CharacterStatus/CharacterStatus';
+import { characterStatusData } from './../../Types/Character/CharacterStatusType';
 
 interface CharacterDetailViewProps {
   characterAvatarData: CharacterAvatarData[] | undefined;
@@ -26,12 +23,13 @@ interface CharacterDetailViewProps {
   characterEquipmentData: CharacterEquipmentData[] | undefined;
   charactrCreatureData: CharactrCreatureData | undefined;
   characterFlagData: CharacterFlagData | undefined;
+  CharacterStatusData: characterStatusData | undefined;
   serverId: string | null;
   characterId: string | null;
   loading: boolean;
 }
 
-function CharacterDetailView({
+function CharacterViewBody({
   characterAvatarData,
   characterDetailData,
   characterTalismanData,
@@ -40,7 +38,7 @@ function CharacterDetailView({
   characterFlagData,
   serverId,
   characterId,
-  loading,
+  CharacterStatusData,
 }: CharacterDetailViewProps) {
   const tabs = [
     { tabName: '장비', tabAddress: <CharacterEquipment characterEquipmentData={characterEquipmentData} characterId={characterId} /> },
@@ -52,16 +50,16 @@ function CharacterDetailView({
 
   return (
     <div>
-      <CharacterDetailBannerContent characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} loading={loading} />
+      <CharacterDetailBannerContent characterInfomationData={characterDetailData} serverId={serverId} characterId={characterId} />
       <div className="w-Container relative m-auto">
         <EventBannerContainer />
       </div>
       <div className="w-Container m-auto flex justify-center relative">
-        <CharacterStatusContainer characterId={characterId} serverId={serverId} />
+        <CharacterStatus characterStatusData={CharacterStatusData} serverId={serverId} characterId={characterId} />
         <CharacterTab tabs={tabs} />
       </div>
     </div>
   );
 }
 
-export default CharacterDetailView;
+export default CharacterViewBody;
