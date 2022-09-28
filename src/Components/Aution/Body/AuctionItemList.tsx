@@ -3,7 +3,6 @@ import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
 import { AuctionData } from '../../Types/Auction/AuctionType';
 import noItemLogo from '../../../asset/images/noitem.png';
 import AuctionItem from './AuctionItem';
-import EventBannerContainer from '../../../DesignPattern/EvemtBanner/EventBannerContainer';
 
 interface AuctionItemDataProps {
   AuctionItemData: AuctionData[];

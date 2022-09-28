@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
 import itemLogo from '../../../asset/images/itemLogo.png';
 import { AuctionData } from '../../Types/Auction/AuctionType';
 import AuctionItemList from './AuctionItemList';
@@ -12,10 +11,15 @@ function AuctionItemListContainer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`https://dnf-react-typescript.herokuapp.com/auction/itemSearch?itemName=${auctionItemName}`).then(auctionData => {
-      setAuctionItemData(auctionData.data.rows);
-      setLoading(false);
-    });
+    axios
+      .get(`https://dnf-react-typescript.herokuapp.com/auction/itemSearch?itemName=${auctionItemName}`)
+      .then(auctionData => {
+        setAuctionItemData(auctionData.data.rows);
+        setLoading(false);
+      })
+      .catch(error => {
+        setLoading(false);
+      });
   }, []);
 
   return (
