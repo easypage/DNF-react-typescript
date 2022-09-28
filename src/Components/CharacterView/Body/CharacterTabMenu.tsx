@@ -34,7 +34,6 @@ function CharacterTabMenu({ tabs }: tabsProps) {
             <div className={toggleState === `${contents.tabName}` ? 'block bg-white shadow-xl rounded-md w-CharacterContent mt-3 p-4 mb-3' : 'hidden'} key={contents.tabName}>
               <p className="font-bold">{contents.tabName}</p>
               {contents.tabAddress}
-              {(console.log(contents.tabAddress.props === null ? '널' : '아님'), (<div></div>))}
             </div>
           ))}
         </div>

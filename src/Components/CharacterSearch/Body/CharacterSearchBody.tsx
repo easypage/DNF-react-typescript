@@ -10,8 +10,6 @@ interface CharacterSimpleDataListProps {
   CharacterSimpleDataList: CharacterSimpleData[];
 }
 function CharacterSearchBody({ CharacterSimpleDataList }: CharacterSimpleDataListProps) {
-  console.log(CharacterSimpleDataList);
-
   return (
     <div className="w-Container relative m-auto">
       <p className="text-center mt-common text-4xl font-bold">캐릭터 검색</p>

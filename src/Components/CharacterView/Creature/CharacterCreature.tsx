@@ -6,8 +6,6 @@ interface characterCreatureProps {
 }
 
 function CharacterCreature({ characterCreatureData }: characterCreatureProps) {
-  console.log(characterCreatureData);
-
   return (
     <div className="flex flex-row items-center h-9 borderContainer">
       {characterCreatureData === null ? (

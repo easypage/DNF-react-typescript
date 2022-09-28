@@ -23,7 +23,6 @@ function CharacterSearchMainContainer() {
         setLoading(false);
       });
   }, []);
-  console.log(characterName);
 
   //헤더 푸터 바디 작성
   return loading ? (

@@ -11,7 +11,6 @@ function EventBannerContainer() {
       const data = await axios.get('https://dnf-react-typescript.herokuapp.com/event/banner');
 
       setEventBanner(data.data);
-      console.log(data.data);
     }
 
     if (eventBanner.length == 0) {

@@ -20,12 +20,13 @@ function CharacterEquipment({ characterEquipmentData }: characterEquipmentProps)
 
                 <p className={`w-48 text-xs font-bold ${itemColor[equipmentData.itemRarity]}`}>{equipmentData.itemName}</p>
                 <div className="flex flex-col items-center">
-                  {equipmentData.enchant?.status.map(equipmentStatus => (
-                    <div className="w-40 flex flex-row justify-center item " key={equipmentStatus.name}>
-                      <p className="text-xs mr-1 ">{equipmentStatus.name}</p>
-                      <p className="text-xs mr-1  "> {equipmentStatus.value}</p>
-                    </div>
-                  ))}
+                  {equipmentData.enchant?.status &&
+                    equipmentData.enchant?.status.map(equipmentStatus => (
+                      <div className="w-40 flex flex-row justify-center item " key={equipmentStatus.name}>
+                        <p className="text-xs mr-1 ">{equipmentStatus.name}</p>
+                        <p className="text-xs mr-1  "> {equipmentStatus.value}</p>
+                      </div>
+                    ))}
                 </div>
               </div>
             </li>

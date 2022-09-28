@@ -6,7 +6,6 @@ interface characterTalismanProps {
 }
 
 function CharacterTalisman({ characterTalismanData }: characterTalismanProps) {
-  console.log(characterTalismanData);
   return (
     <div className="flex flex-col ">
       {characterTalismanData === null ? (
