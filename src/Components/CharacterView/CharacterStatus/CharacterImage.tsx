@@ -7,9 +7,9 @@ interface CharacterImageProps {
 }
 function CharacterImage({ serverId, characterId }: CharacterImageProps) {
   return (
-    <div className="flex justify-center mt-2">
-      <div className="w-[500px] mb-2">
-        <img src={characterBackImage} alt="" />
+    <div className="flex justify-center mt-common ">
+      <div className="w-[500px] mb-2 ">
+        <img className="opacity-80  rounded-lg" src={characterBackImage} alt="" />
         <img
           className="absolute top-5 left-[150px] m-auto"
           src={`https://dnf-react-typescript.herokuapp.com/character/characterImage?serverId=${serverId}&characterId=${characterId}?zoom=1`}
