@@ -1,9 +1,7 @@
 import React from 'react';
-import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
 import { CharacterSimpleData } from '../../Types/Character/CharacterType';
 
 import CharacterCard from './CharacterCard';
-import VerticalAdBanner from './../../../DesignPattern/AdBanner/VerticalAdBanner';
 
 interface CharacterDataProps {
   CharacterSimpleDataList: CharacterSimpleData[] | undefined;

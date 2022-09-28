@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { itemColor } from '../../../asset/ts/serverList';
 import { CharacterEquipmentData } from '../../Types/Character/CharacterEquipmentType';
 interface characterEquipmentProps {
   characterEquipmentData: CharacterEquipmentData[] | undefined;
-  characterId: string | null;
 }
 
-function CharacterEquipment({ characterEquipmentData, characterId }: characterEquipmentProps) {
+function CharacterEquipment({ characterEquipmentData }: characterEquipmentProps) {
   return (
     <div className="w-full flex flex-col">
       {characterEquipmentData === null ? (

@@ -41,7 +41,7 @@ function CharacterViewBody({
   CharacterStatusData,
 }: CharacterDetailViewProps) {
   const tabs = [
-    { tabName: '장비', tabAddress: <CharacterEquipment characterEquipmentData={characterEquipmentData} characterId={characterId} /> },
+    { tabName: '장비', tabAddress: <CharacterEquipment characterEquipmentData={characterEquipmentData} /> },
     { tabName: '아바타', tabAddress: <CharacterAvatar characterAvatarData={characterAvatarData} /> },
     { tabName: '크리쳐', tabAddress: <CharacterCreature characterCreatureData={characterCreatureData} /> },
     { tabName: '휘장', tabAddress: <CharacterFlag characterFlagData={characterFlagData} /> },

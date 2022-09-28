@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { CharacterSimpleData } from '../Types/Character/CharacterType';
-import CharacterCardList from './Body/CharacterCardList';
 import CharacterSearchBody from './Body/CharacterSearchBody';
 import CharacterSearchFooter from './Footer/CharacterSearchFooter';
 import CharacterSearchHeader from './Header/CharacterSearchHeader';

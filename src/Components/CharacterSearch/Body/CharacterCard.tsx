@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { serverReName } from '../../../asset/ts/serverList';
-import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
+
 import { CharacterSimpleData } from '../../Types/Character/CharacterType';
 
 interface CharacterProps {

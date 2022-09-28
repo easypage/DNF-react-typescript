@@ -1,5 +1,4 @@
 import React from 'react';
-import LoadingBar from '../../../DesignPattern/Loding/LoadingBar';
 import { CharacterDetailData } from '../../Types/Character/CharacterDetailType';
 import '../../../css/CharacterViewBanner.css';
 interface CharacterProps {
