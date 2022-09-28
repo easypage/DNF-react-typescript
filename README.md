@@ -6,6 +6,14 @@
 
 > 🚀 DNF API 를 **React** (TypeScript), **Tailwind,** **Node**(Express)를 이용하여 검색사이트를 구현 배포 하였습니다.
 
+## 🚀**관련 사이트**
+
+> **[FrontEnd(netlify) 배포](https://chimerical-genie-9befff.netlify.app/)**
+
+> **[BackEnd(heroku) 배포](https://dnf-react-typescript.herokuapp.com/)**
+
+> **[BackEnd(Github) 배포](https://github.com/easypage/DNF-react-typescript-server)**
+
 ---
 
 ## 🚀 **팀원**
