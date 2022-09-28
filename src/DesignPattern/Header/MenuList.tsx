@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../../css/Header.css';
+import '../../css/HeaderMenu.css';
 
 interface MenuListProps {
   navMenu: '캐릭터검색' | '경매장';
