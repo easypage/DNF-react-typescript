@@ -5,7 +5,7 @@ import CharacterSearchForm from './../../../DesignPattern/SearchForm/CharacterSe
 
 function HomeBody() {
   return (
-    <div className="w-Container flex flex-col relative items-center m-auto">
+    <div className="w-Container flex flex-col relative items-center m-auto h-[650px]">
       <img src={BodyLogo} className="mt-common" alt="mainlogo" />
       <CharacterSearchForm />
     </div>

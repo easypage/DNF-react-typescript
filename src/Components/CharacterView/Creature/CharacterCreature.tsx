@@ -13,8 +13,7 @@ function CharacterCreature({ characterCreatureData }: characterCreatureProps) {
       {characterCreatureData === null ? (
         <div>크리쳐가 존재하지 않습니다.</div>
       ) : (
-        <div>
-          <p className="text-xs text-center font-bold border-r border-solid border-gray-400 w-14 mr-3">크리쳐</p>
+        <div className="flex flex-row items-center">
           <img src={`https://dnf-react-typescript.herokuapp.com/item/itemimage?itemId=${characterCreatureData?.itemId} `} alt={characterCreatureData?.itemName} className="mr-2" />
           <p className="text-xs font-bold mr-2">{characterCreatureData?.itemName}</p>
         </div>

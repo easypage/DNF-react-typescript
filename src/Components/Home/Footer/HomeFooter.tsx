@@ -1,12 +1,12 @@
 import React from 'react';
 import Footer from '../../../DesignPattern/Footer/Footer';
 
-function AuctionFooter() {
+function HomeFooter() {
   return (
-    <div>
+    <div className="">
       <Footer />
     </div>
   );
 }
 
-export default AuctionFooter;
+export default HomeFooter;
