@@ -3,7 +3,7 @@ import '../../css/adBanner.css';
 
 function VerticalAdBanner() {
   return (
-    <div>
+    <div className="lg:hidden">
       <a href="https://github.com/easypage/DNF-react-typescript" target="_blank" className="adBanner w-VerticalBanner h-VerticalBanner absolute right-VerticalAdBannerRight top-10"></a>
     </div>
   );
