@@ -30,6 +30,16 @@ function CharacterStatus({ characterStatusData, serverId, characterId }: charact
             return <div className="w-2/4 nullList border-b border-solid border-gray-400 last:border-none " key={index}></div>;
           }
         })}
+
+        {characterStatusData?.attributeEnhancement.map(attributeEnhancements => (
+          <div className="flex flex-row items-center   ">
+            <p className="flex items-center justify-center w-[30px] h-10">
+              <img src={require(`../../../asset/images/characterStatusImages/${attributeEnhancements.name}.png`)} alt="" className="w-3 h-3 " />
+            </p>
+            <p className="w-[67px] h-10 text-xs font-bold flex justify-center items-center">{attributeEnhancements.name}</p>
+            <p className="w-[27px] h-10 text-xs flex justify-center items-center ">{attributeEnhancements.value}</p>
+          </div>
+        ))}
       </ul>
     </div>
   );
